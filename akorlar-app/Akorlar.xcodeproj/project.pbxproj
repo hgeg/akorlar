@@ -83,40 +83,40 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		D412523919F468BA00792E37 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D4BC1F1D19E68AC700154A1A /* pop.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = EC191218162FB53A00E0CC76;
-			remoteInfo = pop;
-		};
-		D412523B19F468BA00792E37 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D4BC1F1D19E68AC700154A1A /* pop.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = EC68857F18C7B60000C6194C;
-			remoteInfo = "pop-osx";
-		};
-		D412523D19F468BA00792E37 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D4BC1F1D19E68AC700154A1A /* pop.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = ECF01ED318C92B7F009E0AD1;
-			remoteInfo = "pop-tests";
-		};
-		D412523F19F468BA00792E37 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D4BC1F1D19E68AC700154A1A /* pop.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = EC7E319918C93D6500B38170;
-			remoteInfo = "pop-tests-osx";
-		};
 		D4B9291C19E559BA002060E4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D4B928FD19E559BA002060E4 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = D4B9290419E559BA002060E4;
 			remoteInfo = Akorlar;
+		};
+		D4D66AC119FFC302004C4D5B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D4D66ABA19FFC301004C4D5B /* pop.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EC191218162FB53A00E0CC76;
+			remoteInfo = pop;
+		};
+		D4D66AC319FFC302004C4D5B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D4D66ABA19FFC301004C4D5B /* pop.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EC68857F18C7B60000C6194C;
+			remoteInfo = "pop-osx";
+		};
+		D4D66AC519FFC302004C4D5B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D4D66ABA19FFC301004C4D5B /* pop.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = ECF01ED318C92B7F009E0AD1;
+			remoteInfo = "pop-tests";
+		};
+		D4D66AC719FFC302004C4D5B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D4D66ABA19FFC301004C4D5B /* pop.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EC7E319918C93D6500B38170;
+			remoteInfo = "pop-tests-osx";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -228,7 +228,6 @@
 		D4B9298119E563D2002060E4 /* SongsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SongsController.h; sourceTree = "<group>"; };
 		D4B9298219E563D2002060E4 /* SongsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SongsController.m; sourceTree = "<group>"; };
 		D4BC1F1A19E68A2600154A1A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		D4BC1F1D19E68AC700154A1A /* pop.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = pop.xcodeproj; path = ../../pop/pop.xcodeproj; sourceTree = "<group>"; };
 		D4BC1F2D19E68E8C00154A1A /* libpop.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libpop.a; path = "../Library/Developer/Xcode/DerivedData/Akorlar-fgdocwtiuhhfhzbwmotwdmkrnlje/Build/Products/Debug-iphoneos/libpop.a"; sourceTree = "<group>"; };
 		D4BC1F2F19E6AAEB00154A1A /* home_nullcontainer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home_nullcontainer.png; sourceTree = "<group>"; };
 		D4BC1F3119E6B97400154A1A /* Launcher.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Launcher.storyboard; sourceTree = "<group>"; };
@@ -239,6 +238,7 @@
 		D4BC1F3919E8369400154A1A /* songdetail_digerversiyonlarbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = songdetail_digerversiyonlarbutton.png; sourceTree = "<group>"; };
 		D4BC1F3C19E83A7900154A1A /* songdetail_albumart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = songdetail_albumart.png; sourceTree = "<group>"; };
 		D4BC1F3D19E83A7900154A1A /* songdetail_albumartfade.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = songdetail_albumartfade.png; sourceTree = "<group>"; };
+		D4D66ABA19FFC301004C4D5B /* pop.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = pop.xcodeproj; path = ../../../pop/pop.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -262,17 +262,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		D412523319F468BA00792E37 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				D412523A19F468BA00792E37 /* libpop.a */,
-				D412523C19F468BA00792E37 /* pop.framework */,
-				D412523E19F468BA00792E37 /* pop-tests.octest */,
-				D412524019F468BA00792E37 /* pop-tests-osx.octest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		D412524319F53C8400792E37 /* Headers */ = {
 			isa = PBXGroup;
 			children = (
@@ -477,7 +466,7 @@
 			children = (
 				D4283AC919FDCE2D0001C51D /* UIImage+ImageEffects.h */,
 				D4283ACA19FDCE2D0001C51D /* UIImage+ImageEffects.m */,
-				D4BC1F1D19E68AC700154A1A /* pop.xcodeproj */,
+				D4D66ABA19FFC301004C4D5B /* pop.xcodeproj */,
 				D4A71FB019FE801D00270934 /* SDWebImage */,
 				D4B680AE19E595330048A308 /* AFNetworking */,
 			);
@@ -491,6 +480,17 @@
 				D4BC1F1A19E68A2600154A1A /* Foundation.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D4D66ABB19FFC301004C4D5B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D4D66AC219FFC302004C4D5B /* libpop.a */,
+				D4D66AC419FFC302004C4D5B /* pop.framework */,
+				D4D66AC619FFC302004C4D5B /* pop-tests.octest */,
+				D4D66AC819FFC302004C4D5B /* pop-tests-osx.octest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -563,8 +563,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = D412523319F468BA00792E37 /* Products */;
-					ProjectRef = D4BC1F1D19E68AC700154A1A /* pop.xcodeproj */;
+					ProductGroup = D4D66ABB19FFC301004C4D5B /* Products */;
+					ProjectRef = D4D66ABA19FFC301004C4D5B /* pop.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -576,32 +576,32 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		D412523A19F468BA00792E37 /* libpop.a */ = {
+		D4D66AC219FFC302004C4D5B /* libpop.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = libpop.a;
-			remoteRef = D412523919F468BA00792E37 /* PBXContainerItemProxy */;
+			remoteRef = D4D66AC119FFC302004C4D5B /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		D412523C19F468BA00792E37 /* pop.framework */ = {
+		D4D66AC419FFC302004C4D5B /* pop.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = pop.framework;
-			remoteRef = D412523B19F468BA00792E37 /* PBXContainerItemProxy */;
+			remoteRef = D4D66AC319FFC302004C4D5B /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		D412523E19F468BA00792E37 /* pop-tests.octest */ = {
+		D4D66AC619FFC302004C4D5B /* pop-tests.octest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = "pop-tests.octest";
-			remoteRef = D412523D19F468BA00792E37 /* PBXContainerItemProxy */;
+			remoteRef = D4D66AC519FFC302004C4D5B /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		D412524019F468BA00792E37 /* pop-tests-osx.octest */ = {
+		D4D66AC819FFC302004C4D5B /* pop-tests-osx.octest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = "pop-tests-osx.octest";
-			remoteRef = D412523F19F468BA00792E37 /* PBXContainerItemProxy */;
+			remoteRef = D4D66AC719FFC302004C4D5B /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */

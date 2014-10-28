@@ -6,24 +6,40 @@
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>0BE56F35-B617-49C2-9A9D-7508465407C6</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Akorlar</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
+		<key>48662BEAF04E27893345E0D9EC48B67D89330039</key>
+		<string>https://github.com/hgeg/akorlar.git</string>
 		<key>F2FE0AAE95F0B87896F2BEE0B176D4FC32D691A3</key>
 		<string>https://github.com/facebook/pop.git</string>
 	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>akorlar-app/Akorlar.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
+		<key>48662BEAF04E27893345E0D9EC48B67D89330039</key>
+		<string>../../..</string>
 		<key>F2FE0AAE95F0B87896F2BEE0B176D4FC32D691A3</key>
-		<string>pop/</string>
+		<string>../../../../pop</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/facebook/pop.git</string>
+	<string>https://github.com/hgeg/akorlar.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>F2FE0AAE95F0B87896F2BEE0B176D4FC32D691A3</string>
+	<string>48662BEAF04E27893345E0D9EC48B67D89330039</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>48662BEAF04E27893345E0D9EC48B67D89330039</string>
+			<key>IDESourceControlWCCName</key>
+			<string>akorlar</string>
+		</dict>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>

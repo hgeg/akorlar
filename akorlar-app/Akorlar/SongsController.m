@@ -133,20 +133,16 @@
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-#warning Incomplete method implementation.
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return songs.count;
 }
 
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     ItemCell *cell = (ItemCell *)[tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
     Song *s = songs[indexPath.row];
     NSLog(@"Song: %@",s.title);
