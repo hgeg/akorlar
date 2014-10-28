@@ -1,0 +1,57 @@
+//
+//  Tools.pch
+//  Akorlar
+//
+//  Created by Can Bülbül on 08/10/14.
+//  Copyright (c) 2014 orkestra. All rights reserved.
+//
+
+#ifndef Akorlar_Tools_pch
+#define Akorlar_Tools_pch
+
+#ifdef __OBJC__
+#import <Foundation/Foundation.h>
+#import "ORTools.h"
+#import "UIFont+Override.h"
+#import "UIImage+ImageEffects.h"
+#endif
+
+//Colours
+#define rgba(r,g,b,a) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a/255.0]
+#define rgb(r,g,b) rgba(r,g,b,255)
+#define hex(val) [UIColor colorWithRed:((float)((val&0xFF0000)>>16))/255.0 green:((float)((val&0xFF00)>>8))/255.0 blue:((float)(val&0xFF))/255.0 alpha:1]
+
+//Geometry
+#define rect(x,y,w,h) CGRectMake(x,y,w,h)
+#define point(x,y)    CGPointMake(x,y)
+#define size(w,h)     CGSizeMake(w,h)
+
+//Device information
+#define uid      [[[UIDevice currentDevice] identifierForVendor] UUIDString]
+#define isIPad   (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+#define isIPhone (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
+#define screen   [[UIScreen mainScreen] bounds].size
+
+//Threading
+#define runOnMainThread if (![NSThread isMainThread]) { dispatch_sync(dispatch_get_main_queue(), ^{ [self performSelector:_cmd]; }); return; };
+#define after(t,b) dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(t * NSEC_PER_SEC)), dispatch_get_main_queue(), b);
+
+//String formatting
+#define f(base,...) [NSString stringWithFormat:base,##__VA_ARGS__]
+
+//User defaults manipulation
+#define UDSet(k,o)     [[NSUserDefaults standardUserDefaults] setObject:o forKey:k]
+#define UDGet(k)       [[NSUserDefaults standardUserDefaults] objectForKey:k]
+#define UDSetBool(k,d) [[NSUserDefaults standardUserDefaults] setBoolean:d forKey:k]
+#define UDGetBool(k)   [[NSUserDefaults standardUserDefaults] booleanForKey:k]
+#define UDSetInt(k,d)  [[NSUserDefaults standardUserDefaults] setInteger:d forKey:k]
+#define UDGetInt(k)    [[NSUserDefaults standardUserDefaults] integerForKey:k]
+
+//Notification Center management
+#define NCAdd(n,s)      [[NSNotificationCenter defaultCenter] addObserver:self selector:s name:n object:nil]
+#define NCNotify(n,o) [[NSNotificationCenter defaultCenter] postNotificationName:n object:o]
+
+//POP shortcuts
+#define POPwaitFor(a) [NSThread sleepForTimeInterval:a.duration];
+
+#endif
