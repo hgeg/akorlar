@@ -29,7 +29,7 @@
 		D453847919E66C6100323B2B /* home_searchicon.png in Resources */ = {isa = PBXBuildFile; fileRef = D453846719E66C6100323B2B /* home_searchicon.png */; };
 		D453847A19E66C6100323B2B /* songlist_rightarrow.png in Resources */ = {isa = PBXBuildFile; fileRef = D453846819E66C6100323B2B /* songlist_rightarrow.png */; };
 		D453847B19E66C6100323B2B /* topbar_backicon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D453846919E66C6100323B2B /* topbar_backicon@2x.png */; };
-		D453847C19E66C6100323B2B /* digerversiyonlar_kapatbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = D453846A19E66C6100323B2B /* digerversiyonlar_kapatbutton.png */; };
+		D453847C19E66C6100323B2B /* digerversiyonlar_kapatbutton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D453846A19E66C6100323B2B /* digerversiyonlar_kapatbutton@2x.png */; };
 		D453847D19E66C6100323B2B /* home_enyenilerbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = D453846B19E66C6100323B2B /* home_enyenilerbutton.png */; };
 		D453847E19E66C6100323B2B /* home_populerbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = D453846C19E66C6100323B2B /* home_populerbutton.png */; };
 		D453847F19E66C6100323B2B /* home_rastgelebutton.png in Resources */ = {isa = PBXBuildFile; fileRef = D453846D19E66C6100323B2B /* home_rastgelebutton.png */; };
@@ -80,6 +80,10 @@
 		D4BC1F3B19E8369400154A1A /* songdetail_digerversiyonlarbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = D4BC1F3919E8369400154A1A /* songdetail_digerversiyonlarbutton.png */; };
 		D4BC1F3E19E83A7900154A1A /* songdetail_albumart.png in Resources */ = {isa = PBXBuildFile; fileRef = D4BC1F3C19E83A7900154A1A /* songdetail_albumart.png */; };
 		D4BC1F3F19E83A7900154A1A /* songdetail_albumartfade.png in Resources */ = {isa = PBXBuildFile; fileRef = D4BC1F3D19E83A7900154A1A /* songdetail_albumartfade.png */; };
+		D4D66ACA1A011451004C4D5B /* songdetail_noimage.png in Resources */ = {isa = PBXBuildFile; fileRef = D4D66AC91A011451004C4D5B /* songdetail_noimage.png */; };
+		D4D66ACC1A011D3C004C4D5B /* songlist_rightarrow-highlighted@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D4D66ACB1A011D3C004C4D5B /* songlist_rightarrow-highlighted@2x.png */; };
+		D4D66ACF1A0168DB004C4D5B /* RelaxedContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = D4D66ACE1A0168DB004C4D5B /* RelaxedContainerView.m */; };
+		D4D66AD21A0169DA004C4D5B /* EagerScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = D4D66AD11A0169DA004C4D5B /* EagerScrollView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -150,7 +154,7 @@
 		D453846719E66C6100323B2B /* home_searchicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home_searchicon.png; sourceTree = "<group>"; };
 		D453846819E66C6100323B2B /* songlist_rightarrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = songlist_rightarrow.png; sourceTree = "<group>"; };
 		D453846919E66C6100323B2B /* topbar_backicon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "topbar_backicon@2x.png"; sourceTree = "<group>"; };
-		D453846A19E66C6100323B2B /* digerversiyonlar_kapatbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = digerversiyonlar_kapatbutton.png; sourceTree = "<group>"; };
+		D453846A19E66C6100323B2B /* digerversiyonlar_kapatbutton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "digerversiyonlar_kapatbutton@2x.png"; sourceTree = "<group>"; };
 		D453846B19E66C6100323B2B /* home_enyenilerbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home_enyenilerbutton.png; sourceTree = "<group>"; };
 		D453846C19E66C6100323B2B /* home_populerbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home_populerbutton.png; sourceTree = "<group>"; };
 		D453846D19E66C6100323B2B /* home_rastgelebutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home_rastgelebutton.png; sourceTree = "<group>"; };
@@ -228,7 +232,7 @@
 		D4B9298119E563D2002060E4 /* SongsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SongsController.h; sourceTree = "<group>"; };
 		D4B9298219E563D2002060E4 /* SongsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SongsController.m; sourceTree = "<group>"; };
 		D4BC1F1A19E68A2600154A1A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		D4BC1F2D19E68E8C00154A1A /* libpop.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libpop.a; path = "../Library/Developer/Xcode/DerivedData/Akorlar-fgdocwtiuhhfhzbwmotwdmkrnlje/Build/Products/Debug-iphoneos/libpop.a"; sourceTree = "<group>"; };
+		D4BC1F2D19E68E8C00154A1A /* libpop.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libpop.a; path = "../../Library/Developer/Xcode/DerivedData/Akorlar-fgdocwtiuhhfhzbwmotwdmkrnlje/Build/Products/Debug-iphoneos/libpop.a"; sourceTree = "<group>"; };
 		D4BC1F2F19E6AAEB00154A1A /* home_nullcontainer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home_nullcontainer.png; sourceTree = "<group>"; };
 		D4BC1F3119E6B97400154A1A /* Launcher.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Launcher.storyboard; sourceTree = "<group>"; };
 		D4BC1F3319E6BAF300154A1A /* SongController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SongController.h; sourceTree = "<group>"; };
@@ -239,6 +243,12 @@
 		D4BC1F3C19E83A7900154A1A /* songdetail_albumart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = songdetail_albumart.png; sourceTree = "<group>"; };
 		D4BC1F3D19E83A7900154A1A /* songdetail_albumartfade.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = songdetail_albumartfade.png; sourceTree = "<group>"; };
 		D4D66ABA19FFC301004C4D5B /* pop.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = pop.xcodeproj; path = ../../../pop/pop.xcodeproj; sourceTree = "<group>"; };
+		D4D66AC91A011451004C4D5B /* songdetail_noimage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = songdetail_noimage.png; sourceTree = "<group>"; };
+		D4D66ACB1A011D3C004C4D5B /* songlist_rightarrow-highlighted@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "songlist_rightarrow-highlighted@2x.png"; sourceTree = "<group>"; };
+		D4D66ACD1A0168DB004C4D5B /* RelaxedContainerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RelaxedContainerView.h; sourceTree = "<group>"; };
+		D4D66ACE1A0168DB004C4D5B /* RelaxedContainerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RelaxedContainerView.m; sourceTree = "<group>"; };
+		D4D66AD01A0169DA004C4D5B /* EagerScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EagerScrollView.h; sourceTree = "<group>"; };
+		D4D66AD11A0169DA004C4D5B /* EagerScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EagerScrollView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -266,6 +276,8 @@
 			isa = PBXGroup;
 			children = (
 				D4283AAF19FD899D0001C51D /* ORTools.h */,
+				D4D66ACD1A0168DB004C4D5B /* RelaxedContainerView.h */,
+				D4D66AD01A0169DA004C4D5B /* EagerScrollView.h */,
 				D4283ABF19FDB4670001C51D /* UIFont+Override.h */,
 				D4B9290C19E559BA002060E4 /* AppDelegate.h */,
 				D4B9292B19E55A43002060E4 /* HomeController.h */,
@@ -361,7 +373,6 @@
 		D4B928FC19E559BA002060E4 = {
 			isa = PBXGroup;
 			children = (
-				D4BC1F2D19E68E8C00154A1A /* libpop.a */,
 				D4B9290719E559BA002060E4 /* Akorlar */,
 				D4B9291E19E559BA002060E4 /* AkorlarTests */,
 				D4B9290619E559BA002060E4 /* Products */,
@@ -385,6 +396,8 @@
 				D4BC1F1C19E68A3100154A1A /* Frameworks */,
 				D412524319F53C8400792E37 /* Headers */,
 				D4283AB019FD899D0001C51D /* ORTools.m */,
+				D4D66AD11A0169DA004C4D5B /* EagerScrollView.m */,
+				D4D66ACE1A0168DB004C4D5B /* RelaxedContainerView.m */,
 				D4283AC019FDB4670001C51D /* UIFont+Override.m */,
 				D4B9290D19E559BA002060E4 /* AppDelegate.m */,
 				D4B9292C19E55A43002060E4 /* HomeController.m */,
@@ -442,6 +455,7 @@
 				D453846219E66C6100323B2B /* songdetail_oyverbutton_pressed.png */,
 				D453846319E66C6100323B2B /* songdetail_oyverbutton.png */,
 				D4BC1F3819E8369400154A1A /* songdetail_seperator.png */,
+				D4D66AC91A011451004C4D5B /* songdetail_noimage.png */,
 				D4BC1F3C19E83A7900154A1A /* songdetail_albumart.png */,
 				D4BC1F3D19E83A7900154A1A /* songdetail_albumartfade.png */,
 				D4BC1F3919E8369400154A1A /* songdetail_digerversiyonlarbutton.png */,
@@ -450,8 +464,9 @@
 				D453846619E66C6100323B2B /* topbar_searchicon2.png */,
 				D453846719E66C6100323B2B /* home_searchicon.png */,
 				D453846819E66C6100323B2B /* songlist_rightarrow.png */,
+				D4D66ACB1A011D3C004C4D5B /* songlist_rightarrow-highlighted@2x.png */,
 				D453846919E66C6100323B2B /* topbar_backicon@2x.png */,
-				D453846A19E66C6100323B2B /* digerversiyonlar_kapatbutton.png */,
+				D453846A19E66C6100323B2B /* digerversiyonlar_kapatbutton@2x.png */,
 				D453846B19E66C6100323B2B /* home_enyenilerbutton.png */,
 				D453846C19E66C6100323B2B /* home_populerbutton.png */,
 				D453846D19E66C6100323B2B /* home_rastgelebutton.png */,
@@ -467,6 +482,7 @@
 				D4283AC919FDCE2D0001C51D /* UIImage+ImageEffects.h */,
 				D4283ACA19FDCE2D0001C51D /* UIImage+ImageEffects.m */,
 				D4D66ABA19FFC301004C4D5B /* pop.xcodeproj */,
+				D4BC1F2D19E68E8C00154A1A /* libpop.a */,
 				D4A71FB019FE801D00270934 /* SDWebImage */,
 				D4B680AE19E595330048A308 /* AFNetworking */,
 			);
@@ -620,12 +636,13 @@
 				D453847A19E66C6100323B2B /* songlist_rightarrow.png in Resources */,
 				D453847019E66C6100323B2B /* home_bg.png in Resources */,
 				D453847B19E66C6100323B2B /* topbar_backicon@2x.png in Resources */,
-				D453847C19E66C6100323B2B /* digerversiyonlar_kapatbutton.png in Resources */,
+				D453847C19E66C6100323B2B /* digerversiyonlar_kapatbutton@2x.png in Resources */,
 				D4B9291419E559BA002060E4 /* Main.storyboard in Resources */,
 				D453847D19E66C6100323B2B /* home_enyenilerbutton.png in Resources */,
 				D4BC1F3719E6D05100154A1A /* home_searchcontainer.png in Resources */,
 				D4BC1F3E19E83A7900154A1A /* songdetail_albumart.png in Resources */,
 				D453847919E66C6100323B2B /* home_searchicon.png in Resources */,
+				D4D66ACA1A011451004C4D5B /* songdetail_noimage.png in Resources */,
 				D453847519E66C6100323B2B /* songdetail_oyverbutton.png in Resources */,
 				D453847119E66C6100323B2B /* home_logo.png in Resources */,
 				D4BC1F3B19E8369400154A1A /* songdetail_digerversiyonlarbutton.png in Resources */,
@@ -638,6 +655,7 @@
 				D4B9291619E559BA002060E4 /* Images.xcassets in Resources */,
 				D4BC1F3A19E8369400154A1A /* songdetail_seperator.png in Resources */,
 				D453848019E66C6100323B2B /* digerversiyonlar_oysayisicontainer.png in Resources */,
+				D4D66ACC1A011D3C004C4D5B /* songlist_rightarrow-highlighted@2x.png in Resources */,
 				D453847E19E66C6100323B2B /* home_populerbutton.png in Resources */,
 				D4283AC219FDB7420001C51D /* OpenSans-Bold.ttf in Resources */,
 				D4283AC319FDB7420001C51D /* OpenSans-Light.ttf in Resources */,
@@ -662,6 +680,7 @@
 			files = (
 				D4A71FD619FE801D00270934 /* SDWebImageDecoder.m in Sources */,
 				D4B680C619E595330048A308 /* AFSecurityPolicy.m in Sources */,
+				D4D66AD21A0169DA004C4D5B /* EagerScrollView.m in Sources */,
 				D4A71FD219FE801D00270934 /* MKAnnotationView+WebCache.m in Sources */,
 				D4B9290E19E559BA002060E4 /* AppDelegate.m in Sources */,
 				D4B680C719E595330048A308 /* AFURLConnectionOperation.m in Sources */,
@@ -682,6 +701,7 @@
 				D4283AB819FD8F9B0001C51D /* ItemCell.m in Sources */,
 				D4B680C519E595330048A308 /* AFNetworkReachabilityManager.m in Sources */,
 				D4BC1F3519E6BAF300154A1A /* SongController.m in Sources */,
+				D4D66ACF1A0168DB004C4D5B /* RelaxedContainerView.m in Sources */,
 				D4A71FD819FE801D00270934 /* SDWebImageDownloaderOperation.m in Sources */,
 				D4B9298319E563D2002060E4 /* SongsController.m in Sources */,
 				D4B9290B19E559BA002060E4 /* main.m in Sources */,

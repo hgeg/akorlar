@@ -12,7 +12,7 @@
 #import "SongsController.h"
 #import "AFNetworking.h"
 
-@interface HomeController : UIViewController 
+@interface HomeController : UIViewController  <UISearchBarDelegate>
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *logoTopBoundary;
 @property (weak, nonatomic) IBOutlet UIImageView *logo;
 @property (weak, nonatomic) IBOutlet UIView *menu;

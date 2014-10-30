@@ -17,6 +17,7 @@
 @property (strong, nonatomic) NSNumber *timestamp;
 @property (strong, nonatomic) NSString *datahash;
 @property (strong, nonatomic) NSString *image;
+@property (strong, nonatomic) NSArray *versions;
 
 - (id) initWithJSON:(NSDictionary *)json;
 

@@ -15,7 +15,7 @@
 @class Song;
 
 
-@interface SongController : UIViewController <UIScrollViewDelegate, UITextViewDelegate>
+@interface SongController : UIViewController <UIScrollViewDelegate, UITextViewDelegate, UITableViewDataSource, UITableViewDelegate>
 {
     BOOL isSmall;
     float coverCenter;
@@ -37,5 +37,9 @@
 @property (weak, nonatomic) IBOutlet UILabel *versionTitle;
 @property (weak, nonatomic) IBOutlet UIImageView *coverPic;
 @property (weak, nonatomic) IBOutlet UITextView *tabView;
+@property (weak, nonatomic) IBOutlet UITableView *versionsTable;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *tabsBottomConstraint;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *coverHeightConstraint;
+@property (weak, nonatomic) IBOutlet UIButton *otherVersionsButton;
 
 @end

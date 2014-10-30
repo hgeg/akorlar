@@ -13,6 +13,7 @@
 - (id) initWithJSON:(NSDictionary *)data {
     self = [super init];
     if (self) {
+        NSLog(@"data: %@",data[@"versions"]);
         self.artist    = data[@"artist"];
         self.title     = data[@"title"];
         self.chords    = data[@"chords"];
@@ -20,6 +21,7 @@
         self.timestamp = data[@"timestamp"];
         self.datahash  = data[@"hash"];
         self.image     = data[@"img"];
+        self.versions  = data[@"versions"];
     }
     return self;
 }

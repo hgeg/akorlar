@@ -40,6 +40,7 @@
     
     // Show splash animation then fade it out
     UIImageView *splash = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"splash"]];
+    splash.frame = rect(0,0,screen.width,screen.height);
     [self.view addSubview:splash];
     
     POPBasicAnimation *fade = [POPBasicAnimation animationWithPropertyNamed:kPOPViewAlpha];
@@ -110,6 +111,10 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
+    [self performSegueWithIdentifier:@"search" sender:nil];
+}
+
 
 #pragma mark - Navigation
 
@@ -118,6 +123,7 @@
 {
     NSString *term = self.searchBar.text;
     [self.searchBar resignFirstResponder];
+    [ORTools showLoaderOnWindow];
     self.searchBar.text = @"";
     if ([segue.identifier isEqualToString:@"random"]) {
         SongController *dest = (SongController *)segue.destinationViewController;

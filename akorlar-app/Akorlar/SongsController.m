@@ -118,6 +118,7 @@
             [songs addObject:s];
         }
         [self.tableView reloadData];
+        [self.tableView setContentOffset:point(0, 0) animated:true];
         [ORTools removeLoaderFromWindow];
         
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
@@ -145,19 +146,24 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     ItemCell *cell = (ItemCell *)[tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
     Song *s = songs[indexPath.row];
-    NSLog(@"Song: %@",s.title);
-    //cell.rankLabel.text = f(@"%d.",indexPath.row+1);
     cell.titleLabel.text = s.title;
     cell.artistLabel.text = s.artist;
     cell.song = s;
+    UIView *bgColorView = [[UIView alloc] init];
+    bgColorView.backgroundColor = hex(0xCB4E3F);
+    [cell setSelectedBackgroundView:bgColorView];
     @try {
-        [cell.itemImage sd_setImageWithURL:[NSURL URLWithString:s.image] placeholderImage:[UIImage imageNamed:@"artist_default.png"] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *url) {
-            NSLog(@"error: %@",error);
-            cell.itemImage.image = image;
-            cell.itemImage.layer.cornerRadius = cell.itemImage.frame.size.width/2.0;
-            cell.itemImage.clipsToBounds = true;
-            cell.itemImage.layer.borderColor = [rgb(240, 240, 240) CGColor];
-            cell.itemImage.layer.borderWidth = 1;
+        cell.itemImage.image = [UIImage imageNamed:@"songdetail_noimage.png"];
+        cell.itemImage.layer.cornerRadius = cell.itemImage.frame.size.width/2.0;
+        cell.itemImage.clipsToBounds = true;
+        cell.itemImage.layer.borderColor = [rgb(240, 240, 240) CGColor];
+        cell.itemImage.layer.borderWidth = 1;
+        [cell.itemImage sd_setImageWithURL:[NSURL URLWithString:s.image] placeholderImage:[UIImage imageNamed:@"songdetail_noimage.png"] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *url) {
+            if (image) {
+                cell.itemImage.image = image;
+            } else {
+                cell.itemImage.image = [UIImage imageNamed:@"songdetail_noimage.png"];
+            }
         }];
     }
     @catch (NSException *exception) {
@@ -212,7 +218,7 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     [self hideSearchBar:nil];
-    
+    [ORTools showLoaderOnWindow];
     SongController *dest = (SongController *)segue.destinationViewController;
     dest.type = @"fixed";
     dest.song = ((ItemCell *)sender).song;
