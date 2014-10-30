@@ -38,6 +38,7 @@
 
 //String formatting
 #define f(base,...) [NSString stringWithFormat:base,##__VA_ARGS__]
+#define r(base,in,out) [base stringByReplacingOccurrencesOfString:in withString:out]
 
 //User defaults manipulation
 #define UDSet(k,o)     [[NSUserDefaults standardUserDefaults] setObject:o forKey:k]

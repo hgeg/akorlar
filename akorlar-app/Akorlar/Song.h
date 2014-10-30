@@ -18,6 +18,7 @@
 @property (strong, nonatomic) NSString *datahash;
 @property (strong, nonatomic) NSString *image;
 @property (strong, nonatomic) NSArray *versions;
+@property (strong, nonatomic) NSArray *ratings;
 
 - (id) initWithJSON:(NSDictionary *)json;
 

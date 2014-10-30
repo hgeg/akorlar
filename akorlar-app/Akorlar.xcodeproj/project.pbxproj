@@ -20,7 +20,6 @@
 		D4283ACE19FDD1180001C51D /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = D4283ACD19FDD1180001C51D /* UIImageView+AFNetworking.m */; };
 		D453847019E66C6100323B2B /* home_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = D453845E19E66C6100323B2B /* home_bg.png */; };
 		D453847119E66C6100323B2B /* home_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = D453845F19E66C6100323B2B /* home_logo.png */; };
-		D453847319E66C6100323B2B /* home_searchbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = D453846119E66C6100323B2B /* home_searchbutton.png */; };
 		D453847419E66C6100323B2B /* songdetail_oyverbutton_pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = D453846219E66C6100323B2B /* songdetail_oyverbutton_pressed.png */; };
 		D453847519E66C6100323B2B /* songdetail_oyverbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = D453846319E66C6100323B2B /* songdetail_oyverbutton.png */; };
 		D453847619E66C6100323B2B /* topbar_removesearchicon.png in Resources */ = {isa = PBXBuildFile; fileRef = D453846419E66C6100323B2B /* topbar_removesearchicon.png */; };
@@ -35,8 +34,9 @@
 		D453847F19E66C6100323B2B /* home_rastgelebutton.png in Resources */ = {isa = PBXBuildFile; fileRef = D453846D19E66C6100323B2B /* home_rastgelebutton.png */; };
 		D453848019E66C6100323B2B /* digerversiyonlar_oysayisicontainer.png in Resources */ = {isa = PBXBuildFile; fileRef = D453846E19E66C6100323B2B /* digerversiyonlar_oysayisicontainer.png */; };
 		D453848119E66C6100323B2B /* digerversiyonlar_rightarrow.png in Resources */ = {isa = PBXBuildFile; fileRef = D453846F19E66C6100323B2B /* digerversiyonlar_rightarrow.png */; };
-		D453848319E66D1D00323B2B /* splash@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D453848219E66D1D00323B2B /* splash@2x.png */; };
 		D453848519E66D2400323B2B /* splash-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D453848419E66D2400323B2B /* splash-568h@2x.png */; };
+		D49FD6D11A02938D00C25188 /* home_searchbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = D49FD6D01A02938D00C25188 /* home_searchbutton.png */; };
+		D49FD6D31A02B59100C25188 /* splash@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D49FD6D21A02B59100C25188 /* splash@2x.png */; };
 		D4A71FD219FE801D00270934 /* MKAnnotationView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = D4A71FB219FE801D00270934 /* MKAnnotationView+WebCache.m */; };
 		D4A71FD319FE801D00270934 /* NSData+ImageContentType.m in Sources */ = {isa = PBXBuildFile; fileRef = D4A71FB419FE801D00270934 /* NSData+ImageContentType.m */; };
 		D4A71FD419FE801D00270934 /* SDImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = D4A71FB619FE801D00270934 /* SDImageCache.m */; };
@@ -145,7 +145,6 @@
 		D4283ACD19FDD1180001C51D /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
 		D453845E19E66C6100323B2B /* home_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home_bg.png; sourceTree = "<group>"; };
 		D453845F19E66C6100323B2B /* home_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home_logo.png; sourceTree = "<group>"; };
-		D453846119E66C6100323B2B /* home_searchbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home_searchbutton.png; sourceTree = "<group>"; };
 		D453846219E66C6100323B2B /* songdetail_oyverbutton_pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = songdetail_oyverbutton_pressed.png; sourceTree = "<group>"; };
 		D453846319E66C6100323B2B /* songdetail_oyverbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = songdetail_oyverbutton.png; sourceTree = "<group>"; };
 		D453846419E66C6100323B2B /* topbar_removesearchicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = topbar_removesearchicon.png; sourceTree = "<group>"; };
@@ -160,8 +159,9 @@
 		D453846D19E66C6100323B2B /* home_rastgelebutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home_rastgelebutton.png; sourceTree = "<group>"; };
 		D453846E19E66C6100323B2B /* digerversiyonlar_oysayisicontainer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = digerversiyonlar_oysayisicontainer.png; sourceTree = "<group>"; };
 		D453846F19E66C6100323B2B /* digerversiyonlar_rightarrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = digerversiyonlar_rightarrow.png; sourceTree = "<group>"; };
-		D453848219E66D1D00323B2B /* splash@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "splash@2x.png"; sourceTree = "<group>"; };
 		D453848419E66D2400323B2B /* splash-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "splash-568h@2x.png"; sourceTree = "<group>"; };
+		D49FD6D01A02938D00C25188 /* home_searchbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home_searchbutton.png; sourceTree = "<group>"; };
+		D49FD6D21A02B59100C25188 /* splash@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "splash@2x.png"; sourceTree = "<group>"; };
 		D4A71FB119FE801D00270934 /* MKAnnotationView+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MKAnnotationView+WebCache.h"; sourceTree = "<group>"; };
 		D4A71FB219FE801D00270934 /* MKAnnotationView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MKAnnotationView+WebCache.m"; sourceTree = "<group>"; };
 		D4A71FB319FE801D00270934 /* NSData+ImageContentType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+ImageContentType.h"; sourceTree = "<group>"; };
@@ -446,12 +446,12 @@
 			children = (
 				D4283AB919FDB3E00001C51D /* Fonts */,
 				D453848419E66D2400323B2B /* splash-568h@2x.png */,
-				D453848219E66D1D00323B2B /* splash@2x.png */,
+				D49FD6D21A02B59100C25188 /* splash@2x.png */,
 				D453845E19E66C6100323B2B /* home_bg.png */,
 				D453845F19E66C6100323B2B /* home_logo.png */,
+				D49FD6D01A02938D00C25188 /* home_searchbutton.png */,
 				D4BC1F3619E6D05100154A1A /* home_searchcontainer.png */,
 				D4BC1F2F19E6AAEB00154A1A /* home_nullcontainer.png */,
-				D453846119E66C6100323B2B /* home_searchbutton.png */,
 				D453846219E66C6100323B2B /* songdetail_oyverbutton_pressed.png */,
 				D453846319E66C6100323B2B /* songdetail_oyverbutton.png */,
 				D4BC1F3819E8369400154A1A /* songdetail_seperator.png */,
@@ -629,9 +629,9 @@
 			files = (
 				D4BC1F3019E6AAEB00154A1A /* home_nullcontainer.png in Resources */,
 				D453848519E66D2400323B2B /* splash-568h@2x.png in Resources */,
+				D49FD6D11A02938D00C25188 /* home_searchbutton.png in Resources */,
 				D453847819E66C6100323B2B /* topbar_searchicon2.png in Resources */,
 				D453847619E66C6100323B2B /* topbar_removesearchicon.png in Resources */,
-				D453847319E66C6100323B2B /* home_searchbutton.png in Resources */,
 				D453848119E66C6100323B2B /* digerversiyonlar_rightarrow.png in Resources */,
 				D453847A19E66C6100323B2B /* songlist_rightarrow.png in Resources */,
 				D453847019E66C6100323B2B /* home_bg.png in Resources */,
@@ -647,13 +647,13 @@
 				D453847119E66C6100323B2B /* home_logo.png in Resources */,
 				D4BC1F3B19E8369400154A1A /* songdetail_digerversiyonlarbutton.png in Resources */,
 				D453847419E66C6100323B2B /* songdetail_oyverbutton_pressed.png in Resources */,
-				D453848319E66D1D00323B2B /* splash@2x.png in Resources */,
 				D4BC1F3219E6B97400154A1A /* Launcher.storyboard in Resources */,
 				D453847719E66C6100323B2B /* topbar_searchicon@2x.png in Resources */,
 				D453847F19E66C6100323B2B /* home_rastgelebutton.png in Resources */,
 				D4BC1F3F19E83A7900154A1A /* songdetail_albumartfade.png in Resources */,
 				D4B9291619E559BA002060E4 /* Images.xcassets in Resources */,
 				D4BC1F3A19E8369400154A1A /* songdetail_seperator.png in Resources */,
+				D49FD6D31A02B59100C25188 /* splash@2x.png in Resources */,
 				D453848019E66C6100323B2B /* digerversiyonlar_oysayisicontainer.png in Resources */,
 				D4D66ACC1A011D3C004C4D5B /* songlist_rightarrow-highlighted@2x.png in Resources */,
 				D453847E19E66C6100323B2B /* home_populerbutton.png in Resources */,
@@ -838,7 +838,7 @@
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Taner Yildirim (677762377T)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Akorlar/Tools.pch;
 				INFOPLIST_FILE = Akorlar/Info.plist;
@@ -855,7 +855,7 @@
 					"-all_load",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "b9fea830-1fe2-441a-8063-968f68b2e101";
+				PROVISIONING_PROFILE = "7e7b9f22-4c9c-4231-9a5d-b25921fa68be";
 				USER_HEADER_SEARCH_PATHS = /Users/hgeg/pop;
 			};
 			name = Debug;
@@ -866,7 +866,7 @@
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Taner Yildirim (677762377T)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Akorlar/Tools.pch;
 				INFOPLIST_FILE = Akorlar/Info.plist;
@@ -883,7 +883,7 @@
 					"-all_load",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "b9fea830-1fe2-441a-8063-968f68b2e101";
+				PROVISIONING_PROFILE = "7e7b9f22-4c9c-4231-9a5d-b25921fa68be";
 				USER_HEADER_SEARCH_PATHS = /Users/hgeg/pop;
 			};
 			name = Release;

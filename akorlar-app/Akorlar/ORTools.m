@@ -14,7 +14,7 @@
 + (void) showLoaderOn:(UIView *)view {
     UIActivityIndicatorView *previous = (UIActivityIndicatorView *)[view viewWithTag:loaderTag];
     if(previous) [previous removeFromSuperview];
-    UIActivityIndicatorView *loader = [[UIActivityIndicatorView alloc] initWithFrame:rect(0, 0, screen.width, screen.height)];
+    UIActivityIndicatorView *loader = [[UIActivityIndicatorView alloc] initWithFrame:rect(0, 0, view.frame.size.width, view.frame.size.height)];
     loader.backgroundColor = rgba(0, 0, 0, 255*loaderDensity);
     loader.activityIndicatorViewStyle = UIActivityIndicatorViewStyleWhite;
     loader.alpha = 0;
@@ -90,6 +90,16 @@
         }];
         return true;
     }else return false;
+}
+
++ (NSString *) linkify:(NSString *)url {
+    NSString *new = f(@"%@",url);
+    NSDictionary *trans = @{@"ı":@"i", @"ö":@"o", @"ü":@"u", @"ş":@"s", @"Ş":@"s", @"Ç":@"ç", @"Ö":@"o", @"Ü":@"u", @"Ğ":@"g", @"İ":@"i", @"ğ":@"g", @"ç":@"c", @" ":@"-", @"&#305;":@"i", @"&#351;":@"s"};
+    for (NSString *key in trans) {
+        new = r(new,key,trans[key]);
+    }
+    return [new lowercaseString];
+    
 }
 
 @end

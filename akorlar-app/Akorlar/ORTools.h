@@ -28,4 +28,6 @@
 
 + (BOOL) removeViewFromWindowWithTag:(int) tag;
 
++ (NSString *) linkify:(NSString *)url;
+
 @end

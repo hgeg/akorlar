@@ -41,5 +41,8 @@
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *tabsBottomConstraint;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *coverHeightConstraint;
 @property (weak, nonatomic) IBOutlet UIButton *otherVersionsButton;
+@property (weak, nonatomic) IBOutlet UIButton *versionButton;
+@property (weak, nonatomic) IBOutlet UILabel *ratingLabel;
+@property (weak, nonatomic) IBOutlet UIButton *rateButton;
 
 @end

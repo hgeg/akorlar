@@ -110,7 +110,7 @@
     [ORTools showLoaderOnWindow];
     
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-    [manager GET:f(@"http://orkestra.co/akorlar/search/%@/",[self.keyword stringByReplacingOccurrencesOfString:@" " withString:@"%20"]) parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    [manager GET:[ORTools linkify:f(@"http://orkestra.co/akorlar/search/%@/",self.keyword)] parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
         songs = [[NSMutableArray alloc] initWithCapacity:10];
         NSArray *data = (NSArray *)responseObject[@"data"];
         for (NSDictionary* d in data) {

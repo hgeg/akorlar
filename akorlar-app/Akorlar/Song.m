@@ -22,6 +22,7 @@
         self.datahash  = data[@"hash"];
         self.image     = data[@"img"];
         self.versions  = data[@"versions"];
+        self.ratings   = data[@"ratings"];
     }
     return self;
 }

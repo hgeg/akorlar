@@ -42,7 +42,7 @@
     self.navigationItem.title = @"";
     self.tabView.userInteractionEnabled = false;
     self.tabView.delegate = self;
-    self.coverHeightConstraint.constant = screen.width+200;
+    self.coverHeightConstraint.constant = screen.width*2;
     if (isIPad)
         self.tabsBottomConstraint.constant = -screen.height+168;
     else
@@ -54,8 +54,12 @@
         self.artistTitleSmall.text = self.song.artist;
         self.songTitle.text = self.song.title;
         self.songTitleSmall.text = self.song.title;
+        
         self.navigationItem.title = self.song.title;
         self.versionTitle.text = f(@"Versiyon %ld",(long)[self.song.version integerValue]);
+        self.ratingLabel.text = self.song.ratings?f(@"%@",self.song.ratings[[self.song.version integerValue]-1]):0;
+        
+        self.versionButton.enabled = [self.song.versions count]>1?true:false;
         
         [self.artistPic sd_setImageWithURL:[NSURL URLWithString:self.song.image] placeholderImage: [UIImage imageNamed:@"songdetail_noimage.png"] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
             if (image) {
@@ -66,13 +70,15 @@
             }
             
             self.tabView.text = [NSString stringWithContentsOfURL:[NSURL URLWithString:f(@"http://orkestra.co/akorlar/data/%@",self.song.datahash)] encoding:NSUTF8StringEncoding error:nil];
-            self.tabView.font = [UIFont systemFontOfSize:12];
+            if(isIPad)
+                self.tabView.font = [UIFont systemFontOfSize:22];
+            else
+                self.tabView.font = [UIFont systemFontOfSize:14];
             self.tabView.textColor = hex(0x364047);
             
             after(0.5, ^{
                 [ORTools removeLoaderFromWindow];
             })
-            
         }];
         
         return;
@@ -90,13 +96,18 @@
             self.artistTitleSmall.text = self.song.artist;
             self.songTitle.text = self.song.title;
             self.songTitleSmall.text = self.song.title;
+            
             self.navigationItem.title = self.song.title;
-            self.versionTitle.text = f(@"Versiyon %@",self.song.version);
+            self.ratingLabel.text = [self.song.ratings isEqual:[NSNull null]] ?f(@"%@",self.song.ratings[[self.song.version integerValue]-1]):0;
+            self.versionButton.enabled = [self.song.versions count]>1?true:false;
             
             NSLog(@"chords: %@",self.song.chords);
             
             self.tabView.text = [NSString stringWithContentsOfURL:[NSURL URLWithString:f(@"http://orkestra.co/akorlar/data/%@",self.song.datahash)] encoding:NSUTF8StringEncoding error:nil];
-            self.tabView.font = [UIFont systemFontOfSize:14];
+            if(isIPad)
+                self.tabView.font = [UIFont systemFontOfSize:22];
+            else
+                self.tabView.font = [UIFont systemFontOfSize:14];
             self.tabView.textColor = hex(0x364047);
             
             NSString *imgURL = self.song.image;
@@ -185,9 +196,62 @@
         bgColorView.backgroundColor = rgb(255, 255, 255);
         [cell setSelectedBackgroundView:bgColorView];
         ((UILabel *)[cell viewWithTag:1]).text = f(@"Versiyon %@",self.song.versions[indexPath.row-1]);
-        ((UILabel *)[cell viewWithTag:2]).text = f(@"25 ★");
+        ((UILabel *)[cell viewWithTag:2]).text = f(@"%@ ★",self.song.ratings?self.song.ratings[indexPath.row-1]:0);
     }
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [ORTools showLoaderOnWindow];
+    
+    [tableView deselectRowAtIndexPath:indexPath animated:true];
+    [self hideVersions:nil];
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    NSString *url = [ORTools linkify:f(@"http://orkestra.co/akorlar/%@/%@/%d",self.song.artist,self.song.title,indexPath.row)];
+    NSLog(@"url: %@",url);
+    [manager GET:url parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSDictionary *d = ((NSDictionary *)responseObject)[@"data"][0];
+        self.song = [[Song alloc] initWithJSON:d];
+        [self.versionsTable reloadData];
+        
+        self.artistTitle.text = self.song.artist;
+        self.artistTitleSmall.text = self.song.artist;
+        self.songTitle.text = self.song.title;
+        self.songTitleSmall.text = self.song.title;
+        self.navigationItem.title = self.song.title;
+        self.versionTitle.text = f(@"Versiyon %@",self.song.version);
+        self.ratingLabel.text = self.song.ratings?f(@"%@",self.song.ratings[[self.song.version integerValue]-1]):0;
+        self.rateButton.enabled = true;
+        self.ratingLabel.textColor = hex(0xcb4e3f);
+        
+        NSLog(@"chords: %@",self.song.chords);
+        self.tabView.text = [NSString stringWithContentsOfURL:[NSURL URLWithString:f(@"http://orkestra.co/akorlar/data/%@",self.song.datahash)] encoding:NSUTF8StringEncoding error:nil];
+        if(isIPad)
+            self.tabView.font = [UIFont systemFontOfSize:22];
+        else
+            self.tabView.font = [UIFont systemFontOfSize:14];
+        self.tabView.textColor = hex(0x364047);
+        
+        NSString *imgURL = self.song.image;
+        if (imgURL) {
+            NSURLRequest *req = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:imgURL]];
+            [self.artistPic setImageWithURLRequest:req placeholderImage:[UIImage imageNamed:@"songdetail_noimage.png"] success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image) {
+                self.artistPic.image = image;
+                self.coverPic.image = [image applyBlurWithRadius:1 tintColor:rgba(0, 0, 0, 120) saturationDeltaFactor:1.5 maskImage:nil];
+                coverCenter = self.coverPic.center.y;
+                [ORTools removeLoaderFromWindow];
+            } failure:^(NSURLRequest *req,NSHTTPURLResponse *res, NSError *error) {
+                coverCenter = self.coverPic.center.y;
+                [ORTools removeLoaderFromWindow];
+            } ];
+        }else {
+            self.artistPic.image = [UIImage imageNamed:@"songdetail_noimage.png"];
+            [ORTools removeLoaderFromWindow];
+        }
+        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"Error: %@", error);
+    }];
 }
 
 
@@ -253,13 +317,19 @@
     }
 }
 
--(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
-{
-    UITouch *touch = [touches anyObject];
-    CGPoint location = [touch locationInView:self.view];
-    UIView *endView = [self.view hitTest:location withEvent:nil];
-    
-    NSLog(@"point: (%.2f,%.2f), receiver: %@",location.x,location.y,endView);
+
+- (IBAction)rate:(id)sender {
+    UIButton *ratingButton = (UIButton *)sender;
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    [ORTools showLoaderOn:ratingButton];
+    [manager GET:[ORTools linkify:f(@"http://orkestra.co/akorlar/rate/%@/%@/%@",self.song.artist,self.song.title,self.song.version)] parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        self.ratingLabel.text = f(@"%@",((NSDictionary *)responseObject)[@"rating"]);
+        self.ratingLabel.textColor = hex(0xcb4e3f);
+        [ORTools removeLoaderFrom:ratingButton];
+        ratingButton.enabled = false;
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+         
+     }];
 }
 
 /*
