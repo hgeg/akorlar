@@ -121,12 +121,29 @@
                                             <segue destination="Off-aS-18m" kind="show" identifier="search" id="52z-es-mzi"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1rI-QU-4yG">
+                                        <rect key="frame" x="25" y="54" width="270" height="32"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="32" id="14z-WC-txt"/>
+                                            <constraint firstAttribute="width" constant="270" id="rvQ-vh-rBf"/>
+                                        </constraints>
+                                        <state key="normal" image="home_searchbutton.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="search:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Y8k-cz-IIV"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstItem="1rI-QU-4yG" firstAttribute="top" secondItem="LSA-Qy-lKR" secondAttribute="top" id="0cA-pD-6r5"/>
+                                    <constraint firstItem="1rI-QU-4yG" firstAttribute="bottom" secondItem="LSA-Qy-lKR" secondAttribute="bottom" id="3v9-ui-NZ6"/>
                                     <constraint firstItem="hoI-Rb-NjV" firstAttribute="leading" relation="lessThanOrEqual" secondItem="ssn-dZ-8BC" secondAttribute="leading" constant="100" id="5Gc-Mf-Qzo"/>
                                     <constraint firstAttribute="centerX" secondItem="PXO-eP-QjC" secondAttribute="centerX" id="74I-tR-uTs"/>
                                     <constraint firstAttribute="centerX" secondItem="bfL-g8-Zsc" secondAttribute="centerX" id="7DN-8Q-BU0"/>
+                                    <constraint firstItem="1rI-QU-4yG" firstAttribute="trailing" secondItem="LSA-Qy-lKR" secondAttribute="trailing" id="9LX-W5-h75"/>
+                                    <constraint firstItem="1rI-QU-4yG" firstAttribute="centerX" secondItem="LSA-Qy-lKR" secondAttribute="centerX" id="9Uh-8R-Mjb"/>
                                     <constraint firstItem="KBv-wH-xZ8" firstAttribute="top" relation="lessThanOrEqual" secondItem="LSA-Qy-lKR" secondAttribute="bottom" constant="35" id="BQi-0R-HTI"/>
                                     <constraint firstItem="PXO-eP-QjC" firstAttribute="top" secondItem="bfL-g8-Zsc" secondAttribute="bottom" constant="20" id="BxH-4w-6DJ"/>
                                     <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="hoI-Rb-NjV" secondAttribute="trailing" constant="100" id="EP4-Yh-gwp"/>
@@ -137,6 +154,8 @@
                                     <constraint firstAttribute="centerX" secondItem="KBv-wH-xZ8" secondAttribute="centerX" id="T9G-xT-HC6"/>
                                     <constraint firstItem="LSA-Qy-lKR" firstAttribute="top" secondItem="hoI-Rb-NjV" secondAttribute="bottom" constant="5" id="YKN-6l-BKW"/>
                                     <constraint firstAttribute="centerX" secondItem="hoI-Rb-NjV" secondAttribute="centerX" id="aRr-Yx-ddC"/>
+                                    <constraint firstItem="1rI-QU-4yG" firstAttribute="centerY" secondItem="LSA-Qy-lKR" secondAttribute="centerY" id="tIU-ZC-rj5"/>
+                                    <constraint firstItem="1rI-QU-4yG" firstAttribute="leading" secondItem="LSA-Qy-lKR" secondAttribute="leading" id="ycF-jw-EjX"/>
                                     <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="PXO-eP-QjC" secondAttribute="bottom" constant="20" id="zMU-Xa-utx"/>
                                     <constraint firstItem="KBv-wH-xZ8" firstAttribute="top" relation="greaterThanOrEqual" secondItem="LSA-Qy-lKR" secondAttribute="bottom" constant="20" id="zVG-PI-hVu"/>
                                 </constraints>
@@ -341,7 +360,7 @@
                                                     <action selector="showVersions:" destination="8pH-2E-Jw0" eventType="touchUpInside" id="70l-ET-iBT"/>
                                                 </connections>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="19" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AbN-NQ-B5Z">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AbN-NQ-B5Z">
                                                 <rect key="frame" x="272" y="8" width="30" height="23"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="30" id="7uB-RP-mAV"/>

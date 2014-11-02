@@ -39,7 +39,11 @@
     [super viewDidLoad];
     
     // Show splash animation then fade it out
-    UIImageView *splash = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"splash"]];
+    NSString *splash_img;
+    if (isIPhone5)
+         splash_img = @"splash-568x";
+    else splash_img = @"splash";
+    UIImageView *splash = [[UIImageView alloc] initWithImage:[UIImage imageNamed:splash_img]];
     splash.frame = rect(0,0,screen.width,screen.height);
     [self.view addSubview:splash];
     
@@ -112,7 +116,11 @@
 }
 
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
-    [self performSegueWithIdentifier:@"search" sender:nil];
+    if (searchBar.text.length>2) [self performSegueWithIdentifier:@"search" sender:nil];
+}
+
+- (IBAction)search:(id)sender {
+    if (self.searchBar.text.length>2) [self performSegueWithIdentifier:@"search" sender:nil];
 }
 
 

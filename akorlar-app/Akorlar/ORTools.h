@@ -16,6 +16,8 @@
 @interface ORTools : NSObject {
 }
 
++ (void) showLoaderOn:(UIView *)view withMask:(UIImage *)mask;
+
 + (void) showLoaderOn:(UIView *)view;
 
 + (void) showLoaderOnWindow;

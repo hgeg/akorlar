@@ -30,6 +30,7 @@
 #define uid      [[[UIDevice currentDevice] identifierForVendor] UUIDString]
 #define isIPad   (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
 #define isIPhone (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
+#define isIPhone5 [[UIScreen mainScreen] bounds].size.height==568
 #define screen   [[UIScreen mainScreen] bounds].size
 
 //Threading

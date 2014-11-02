@@ -11,7 +11,7 @@
 
 @implementation ORTools
 
-+ (void) showLoaderOn:(UIView *)view {
++ (void) showLoaderOn:(UIView *)view withMask:(UIImage *)mask {
     UIActivityIndicatorView *previous = (UIActivityIndicatorView *)[view viewWithTag:loaderTag];
     if(previous) [previous removeFromSuperview];
     UIActivityIndicatorView *loader = [[UIActivityIndicatorView alloc] initWithFrame:rect(0, 0, view.frame.size.width, view.frame.size.height)];
@@ -19,11 +19,22 @@
     loader.activityIndicatorViewStyle = UIActivityIndicatorViewStyleWhite;
     loader.alpha = 0;
     loader.tag = loaderTag;
+    if(mask) {
+        UIImage *_maskingImage = mask;
+        CALayer *_maskingLayer = [CALayer layer];
+        _maskingLayer.frame = view.bounds;
+        [_maskingLayer setContents:(id)[_maskingImage CGImage]];
+        [view.layer setMask:_maskingLayer];
+    }
     [view addSubview:loader];
     [loader startAnimating];
     [UIView animateWithDuration:0.3 animations:^{
         loader.alpha = 1;
     }];
+}
+
++ (void) showLoaderOn:(UIView *)view {
+    [self showLoaderOn:view withMask:nil];
 }
 
 + (void) showLoaderOnWindow {

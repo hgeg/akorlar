@@ -22,7 +22,11 @@
         self.datahash  = data[@"hash"];
         self.image     = data[@"img"];
         self.versions  = data[@"versions"];
-        self.ratings   = data[@"ratings"];
+        if (data[@"ratings"])
+          self.ratings = [NSMutableArray arrayWithArray:data[@"ratings"]];
+        else
+          self.ratings = nil;
+        
     }
     return self;
 }

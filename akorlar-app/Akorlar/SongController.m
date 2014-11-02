@@ -57,7 +57,7 @@
         
         self.navigationItem.title = self.song.title;
         self.versionTitle.text = f(@"Versiyon %ld",(long)[self.song.version integerValue]);
-        self.ratingLabel.text = self.song.ratings?f(@"%@",self.song.ratings[[self.song.version integerValue]-1]):0;
+        self.ratingLabel.text = self.song.ratings ? f(@"%@",self.song.ratings[[self.song.version integerValue]-1]):@"0";
         
         self.versionButton.enabled = [self.song.versions count]>1?true:false;
         
@@ -70,9 +70,10 @@
             }
             
             self.tabView.text = [NSString stringWithContentsOfURL:[NSURL URLWithString:f(@"http://orkestra.co/akorlar/data/%@",self.song.datahash)] encoding:NSUTF8StringEncoding error:nil];
-            if(isIPad)
+            if(isIPad){
+                self.tabView.textContainer.lineFragmentPadding = 20;
                 self.tabView.font = [UIFont systemFontOfSize:22];
-            else
+            }else
                 self.tabView.font = [UIFont systemFontOfSize:14];
             self.tabView.textColor = hex(0x364047);
             
@@ -98,15 +99,15 @@
             self.songTitleSmall.text = self.song.title;
             
             self.navigationItem.title = self.song.title;
-            self.ratingLabel.text = [self.song.ratings isEqual:[NSNull null]] ?f(@"%@",self.song.ratings[[self.song.version integerValue]-1]):0;
+            NSLog(@"\n\n\n\n\n\n\n\n%d\n\n\n\n\n\n\n\n",[self.song.ratings count]==0);
+            self.ratingLabel.text = self.song.ratings ? f(@"%@",self.song.ratings[[self.song.version integerValue]-1]):@"0";
             self.versionButton.enabled = [self.song.versions count]>1?true:false;
             
-            NSLog(@"chords: %@",self.song.chords);
-            
             self.tabView.text = [NSString stringWithContentsOfURL:[NSURL URLWithString:f(@"http://orkestra.co/akorlar/data/%@",self.song.datahash)] encoding:NSUTF8StringEncoding error:nil];
-            if(isIPad)
+            if(isIPad){
+                self.tabView.textContainer.lineFragmentPadding = 20;
                 self.tabView.font = [UIFont systemFontOfSize:22];
-            else
+            }else
                 self.tabView.font = [UIFont systemFontOfSize:14];
             self.tabView.textColor = hex(0x364047);
             
@@ -196,7 +197,7 @@
         bgColorView.backgroundColor = rgb(255, 255, 255);
         [cell setSelectedBackgroundView:bgColorView];
         ((UILabel *)[cell viewWithTag:1]).text = f(@"Versiyon %@",self.song.versions[indexPath.row-1]);
-        ((UILabel *)[cell viewWithTag:2]).text = f(@"%@ ★",self.song.ratings?self.song.ratings[indexPath.row-1]:0);
+        ((UILabel *)[cell viewWithTag:2]).text = f(@"%@ ★",self.song.ratings?self.song.ratings[indexPath.row-1]:@"0");
     }
     return cell;
 }
@@ -222,13 +223,15 @@
         self.versionTitle.text = f(@"Versiyon %@",self.song.version);
         self.ratingLabel.text = self.song.ratings?f(@"%@",self.song.ratings[[self.song.version integerValue]-1]):0;
         self.rateButton.enabled = true;
-        self.ratingLabel.textColor = hex(0xcb4e3f);
+        self.ratingLabel.text = self.song.ratings ? f(@"%@",self.song.ratings[[self.song.version integerValue]-1]):@"0";
+        self.ratingLabel.textColor = rgb(255,255,255);
         
         NSLog(@"chords: %@",self.song.chords);
         self.tabView.text = [NSString stringWithContentsOfURL:[NSURL URLWithString:f(@"http://orkestra.co/akorlar/data/%@",self.song.datahash)] encoding:NSUTF8StringEncoding error:nil];
-        if(isIPad)
+        if(isIPad){
+            self.tabView.textContainer.lineFragmentPadding = 20;
             self.tabView.font = [UIFont systemFontOfSize:22];
-        else
+        }else
             self.tabView.font = [UIFont systemFontOfSize:14];
         self.tabView.textColor = hex(0x364047);
         
@@ -321,12 +324,25 @@
 - (IBAction)rate:(id)sender {
     UIButton *ratingButton = (UIButton *)sender;
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-    [ORTools showLoaderOn:ratingButton];
+    [ORTools showLoaderOn:ratingButton withMask:ratingButton.imageView.image];
     [manager GET:[ORTools linkify:f(@"http://orkestra.co/akorlar/rate/%@/%@/%@",self.song.artist,self.song.title,self.song.version)] parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
         self.ratingLabel.text = f(@"%@",((NSDictionary *)responseObject)[@"rating"]);
         self.ratingLabel.textColor = hex(0xcb4e3f);
         [ORTools removeLoaderFrom:ratingButton];
         ratingButton.enabled = false;
+        if (self.song.ratings) {
+            self.song.ratings[[self.song.version integerValue]-1] = f(@"%d",[self.song.ratings[[self.song.version integerValue]-1] integerValue]+1);
+        } else {
+            self.song.ratings = [NSMutableArray arrayWithArray:self.song.versions];
+            for (int i=0; i<[self.song.versions count]; i++) {
+                if(i==[self.song.version integerValue]-1)
+                    self.song.ratings[i] = f(@"%d",[self.song.ratings[[self.song.version integerValue]-1] integerValue]+1);
+                else
+                  self.song.ratings[i] = @"0";
+            }
+        }
+        
+        [self.versionsTable reloadData];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
          
      }];
