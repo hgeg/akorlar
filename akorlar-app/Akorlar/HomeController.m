@@ -136,10 +136,14 @@
     if ([segue.identifier isEqualToString:@"random"]) {
         SongController *dest = (SongController *)segue.destinationViewController;
         dest.type = @"random";
-    } else if ([segue.identifier isEqualToString:@"search"]) {
+    }else if ([segue.identifier isEqualToString:@"search"]) {
         SongsController *dest = (SongsController *)segue.destinationViewController;
-        dest.navigationItem.title = @"Arama Sonuçları";
         dest.keyword = term;
+        dest.type = @"search";
+    }else {
+        SongsController *dest = (SongsController *)segue.destinationViewController;
+        dest.keyword = @"";
+        dest.type = segue.identifier;
     }
 }
 

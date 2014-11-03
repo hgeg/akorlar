@@ -28,7 +28,40 @@
 {
     [super viewDidLoad];
     
-    [self search:nil];
+    NSString *url;
+    if ([self.type isEqualToString:@"search"]) {
+        url = f(@"http://orkestra.co/akorlar/search/%@/",self.keyword);
+        self.searchButton.enabled = true;
+        self.navigationItem.title = @"Arama Sonuçları";
+        [self search:nil];
+    }else {
+        url = f(@"http://orkestra.co/akorlar/%@/",self.type);
+        self.searchButton.enabled = false;
+        if ([self.type isEqualToString:@"popular"]) {
+            self.navigationItem.title = @"Popüler Şarkılar";
+        }else {
+            self.navigationItem.title = @"Son Eklenenler";
+        }
+        
+        AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+        [manager GET:[ORTools linkify:url] parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+            songs = [[NSMutableArray alloc] initWithCapacity:10];
+            NSArray *data = (NSArray *)responseObject[@"data"];
+            for (NSDictionary* d in data) {
+                Song *s = [[Song alloc] initWithJSON:d];
+                [songs addObject:s];
+            }
+            [self.tableView reloadData];
+            [self.tableView setContentOffset:point(0, 0) animated:true];
+            [ORTools removeLoaderFromWindow];
+            
+        } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+            NSLog(@"Error: %@", error);
+            [self.navigationController popViewControllerAnimated:true];
+            [ORTools removeLoaderFromWindow];
+        }];
+        
+    }
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -45,6 +78,7 @@
 #pragma mark - SearchBar Related Methods
 
 - (IBAction) showSearchBar:(id)sender {
+    if (![self.type isEqualToString:@"search"]) return;
     //container
     UIView *searchContainer = [[UIView alloc] initWithFrame:rect(0,20,320,44)];
     searchContainer.backgroundColor = hex(0xcb4e3f);
@@ -70,6 +104,7 @@
     [searchContainer addSubview:cancelButton];
     
     [ORTools addViewToWindow:searchContainer];
+    
     after(0.1, ^{
         POPSpringAnimation *moveBar = [POPSpringAnimation animationWithPropertyNamed:kPOPViewFrame];
         moveBar.fromValue = [NSValue valueWithCGRect:rect(-260,0,260,44)];

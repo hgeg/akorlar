@@ -20,17 +20,20 @@
 #define rgba(r,g,b,a) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a/255.0]
 #define rgb(r,g,b) rgba(r,g,b,255)
 #define hex(val) [UIColor colorWithRed:((float)((val&0xFF0000)>>16))/255.0 green:((float)((val&0xFF00)>>8))/255.0 blue:((float)(val&0xFF))/255.0 alpha:1]
+#define bw(w,a) [UIColor colorWithWhite:w alpha:a]
 
-//Geometry
+//Primitive objects
 #define rect(x,y,w,h) CGRectMake(x,y,w,h)
 #define point(x,y)    CGPointMake(x,y)
 #define size(w,h)     CGSizeMake(w,h)
+#define range(s,l)    NSMakeRange(s,l)
 
 //Device information
 #define uid      [[[UIDevice currentDevice] identifierForVendor] UUIDString]
 #define isIPad   (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
 #define isIPhone (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
-#define isIPhone5 [[UIScreen mainScreen] bounds].size.height==568
+#define isWidescreen (fabs((double)[[UIScreen mainScreen]bounds].size.height-(double)568)<DBL_EPSILON)
+#define isIPhone5 (isIPhone && isWidescreen)
 #define screen   [[UIScreen mainScreen] bounds].size
 
 //Threading
@@ -40,6 +43,7 @@
 //String formatting
 #define f(base,...) [NSString stringWithFormat:base,##__VA_ARGS__]
 #define r(base,in,out) [base stringByReplacingOccurrencesOfString:in withString:out]
+#define ra(base,rpl,range) [base replaceCharactersInRange:range withAttributedString:rpl]
 
 //User defaults manipulation
 #define UDSet(k,o)     [[NSUserDefaults standardUserDefaults] setObject:o forKey:k]
@@ -53,7 +57,15 @@
 #define NCAdd(n,s)      [[NSNotificationCenter defaultCenter] addObserver:self selector:s name:n object:nil]
 #define NCNotify(n,o) [[NSNotificationCenter defaultCenter] postNotificationName:n object:o]
 
-//POP shortcuts
-#define POPwaitFor(a) [NSThread sleepForTimeInterval:a.duration];
+//Fonts
+#define font(t,s) [UIFont fontWithName:t size:s]
+
+//Timer
+#define startTimer(p,sel) [NSTimer scheduledTimerWithTimeInterval:p target:self selector:sel userInfo:nil repeats:YES]
+#define stopTimer(t) [t invalidate]
+
+//Alerts
+#define alert(t,m,c,...) [[[UIAlertView alloc] initWithTitle:t message:m delegate:nil cancelButtonTitle:c otherButtonTitles:##__VA_ARGS__,nil] show]
+#define alertD(t,m,c,...) [[[UIAlertView alloc] initWithTitle:t message:m delegate:self cancelButtonTitle:c otherButtonTitles:##__VA_ARGS__,nil] show]
 
 #endif

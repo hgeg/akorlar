@@ -35,6 +35,36 @@
     self.artistPic.layer.borderWidth = 1;
 }
 
+- (NSMutableAttributedString *)markChords:(NSArray *)chords onString:(NSString *)string {
+    NSLog(@"chords: %@",chords);
+    NSMutableAttributedString *tabText = [[NSMutableAttributedString alloc] initWithString:string];
+    [tabText beginEditing];
+    NSMutableArray *variations = [[NSMutableArray alloc] initWithCapacity:[chords count]*4];
+    [chords enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        NSString *c1 = f(@"%@-",(NSString *)obj);
+        NSString *c2 = f(@"-%@",(NSString *)obj);
+        NSString *c3 = f(@"%@  ",(NSString *)obj);
+        NSString *c4 = f(@"  %@",(NSString *)obj);
+        [variations addObject:c1];
+        [variations addObject:c2];
+        [variations addObject:c3];
+        [variations addObject:c4];
+    }];
+    for (NSString *chord in variations) {
+      NSRange range = NSMakeRange(0, tabText.string.length);
+      while(range.location != NSNotFound) {
+        range = [tabText.string rangeOfString:chord options:0 range:range];
+        if(range.location != NSNotFound) {
+          [tabText addAttribute:NSForegroundColorAttributeName value:hex(0xcb4e3f) range:range];
+          range = NSMakeRange(range.location + range.length, tabText.string.length - (range.location + range.length));
+            }
+        }
+        
+    }
+    [tabText endEditing];
+    return tabText;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -69,13 +99,17 @@
                 coverCenter = self.coverPic.center.y;
             }
             
-            self.tabView.text = [NSString stringWithContentsOfURL:[NSURL URLWithString:f(@"http://orkestra.co/akorlar/data/%@",self.song.datahash)] encoding:NSUTF8StringEncoding error:nil];
+            NSMutableAttributedString *tabText = [self markChords:self.song.chords onString:[NSString stringWithContentsOfURL:[NSURL URLWithString:f(@"http://orkestra.co/akorlar/data/%@",self.song.datahash)] encoding:NSUTF8StringEncoding error:nil]];
+            
+            self.tabView.textColor = hex(0x364047);
+            
+            self.tabView.attributedText = tabText;
+            
             if(isIPad){
                 self.tabView.textContainer.lineFragmentPadding = 20;
                 self.tabView.font = [UIFont systemFontOfSize:22];
             }else
                 self.tabView.font = [UIFont systemFontOfSize:14];
-            self.tabView.textColor = hex(0x364047);
             
             after(0.5, ^{
                 [ORTools removeLoaderFromWindow];
@@ -91,25 +125,28 @@
             NSDictionary *d = (NSDictionary *)responseObject;
             self.song = [[Song alloc] initWithJSON:d[@"data"]];
             [self.versionsTable reloadData];
-            //NSLog(@"\nSong:\n  title: %@\n  artist: %@\n  version: %@\n  timestamp: %d\n  hash: %@",self.song.title,self.song.artist,self.song.version, [self.song.timestamp integerValue], self.song.datahash);
             
             self.artistTitle.text = self.song.artist;
             self.artistTitleSmall.text = self.song.artist;
             self.songTitle.text = self.song.title;
             self.songTitleSmall.text = self.song.title;
+            self.versionTitle.text = f(@"Versiyon %ld",(long)[self.song.version integerValue]);
             
             self.navigationItem.title = self.song.title;
-            NSLog(@"\n\n\n\n\n\n\n\n%d\n\n\n\n\n\n\n\n",[self.song.ratings count]==0);
             self.ratingLabel.text = self.song.ratings ? f(@"%@",self.song.ratings[[self.song.version integerValue]-1]):@"0";
             self.versionButton.enabled = [self.song.versions count]>1?true:false;
             
-            self.tabView.text = [NSString stringWithContentsOfURL:[NSURL URLWithString:f(@"http://orkestra.co/akorlar/data/%@",self.song.datahash)] encoding:NSUTF8StringEncoding error:nil];
+            NSMutableAttributedString *tabText = [self markChords:self.song.chords onString:[NSString stringWithContentsOfURL:[NSURL URLWithString:f(@"http://orkestra.co/akorlar/data/%@",self.song.datahash)] encoding:NSUTF8StringEncoding error:nil]];
+            
+            self.tabView.textColor = hex(0x364047);
+            
+            self.tabView.attributedText = tabText;
+            
             if(isIPad){
                 self.tabView.textContainer.lineFragmentPadding = 20;
                 self.tabView.font = [UIFont systemFontOfSize:22];
             }else
                 self.tabView.font = [UIFont systemFontOfSize:14];
-            self.tabView.textColor = hex(0x364047);
             
             NSString *imgURL = self.song.image;
             if (imgURL) {
@@ -226,14 +263,17 @@
         self.ratingLabel.text = self.song.ratings ? f(@"%@",self.song.ratings[[self.song.version integerValue]-1]):@"0";
         self.ratingLabel.textColor = rgb(255,255,255);
         
-        NSLog(@"chords: %@",self.song.chords);
-        self.tabView.text = [NSString stringWithContentsOfURL:[NSURL URLWithString:f(@"http://orkestra.co/akorlar/data/%@",self.song.datahash)] encoding:NSUTF8StringEncoding error:nil];
+        NSMutableAttributedString *tabText = [self markChords:self.song.chords onString:[NSString stringWithContentsOfURL:[NSURL URLWithString:f(@"http://orkestra.co/akorlar/data/%@",self.song.datahash)] encoding:NSUTF8StringEncoding error:nil]];
+        
+        self.tabView.textColor = hex(0x364047);
+        
+        self.tabView.attributedText = tabText;
+        
         if(isIPad){
             self.tabView.textContainer.lineFragmentPadding = 20;
             self.tabView.font = [UIFont systemFontOfSize:22];
         }else
             self.tabView.font = [UIFont systemFontOfSize:14];
-        self.tabView.textColor = hex(0x364047);
         
         NSString *imgURL = self.song.image;
         if (imgURL) {
@@ -331,12 +371,12 @@
         [ORTools removeLoaderFrom:ratingButton];
         ratingButton.enabled = false;
         if (self.song.ratings) {
-            self.song.ratings[[self.song.version integerValue]-1] = f(@"%d",[self.song.ratings[[self.song.version integerValue]-1] integerValue]+1);
+            self.song.ratings[[self.song.version integerValue]-1] = ((NSDictionary *)responseObject)[@"rating"];
         } else {
             self.song.ratings = [NSMutableArray arrayWithArray:self.song.versions];
             for (int i=0; i<[self.song.versions count]; i++) {
                 if(i==[self.song.version integerValue]-1)
-                    self.song.ratings[i] = f(@"%d",[self.song.ratings[[self.song.version integerValue]-1] integerValue]+1);
+                    self.song.ratings[i] = ((NSDictionary *)responseObject)[@"rating"];
                 else
                   self.song.ratings[i] = @"0";
             }

@@ -22,5 +22,7 @@
 }
 
 @property (strong, nonatomic) NSString *keyword;
+@property (strong, nonatomic) NSString *type;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *searchButton;
 
 @end
