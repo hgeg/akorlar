@@ -73,7 +73,6 @@
 		D4BC1F1B19E68A2600154A1A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4BC1F1A19E68A2600154A1A /* Foundation.framework */; };
 		D4BC1F2E19E68E8C00154A1A /* libpop.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D4BC1F2D19E68E8C00154A1A /* libpop.a */; };
 		D4BC1F3019E6AAEB00154A1A /* home_nullcontainer.png in Resources */ = {isa = PBXBuildFile; fileRef = D4BC1F2F19E6AAEB00154A1A /* home_nullcontainer.png */; };
-		D4BC1F3219E6B97400154A1A /* Launcher.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4BC1F3119E6B97400154A1A /* Launcher.storyboard */; };
 		D4BC1F3519E6BAF300154A1A /* SongController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4BC1F3419E6BAF300154A1A /* SongController.m */; };
 		D4BC1F3719E6D05100154A1A /* home_searchcontainer.png in Resources */ = {isa = PBXBuildFile; fileRef = D4BC1F3619E6D05100154A1A /* home_searchcontainer.png */; };
 		D4BC1F3A19E8369400154A1A /* songdetail_seperator.png in Resources */ = {isa = PBXBuildFile; fileRef = D4BC1F3819E8369400154A1A /* songdetail_seperator.png */; };
@@ -84,6 +83,39 @@
 		D4D66ACC1A011D3C004C4D5B /* songlist_rightarrow-highlighted@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D4D66ACB1A011D3C004C4D5B /* songlist_rightarrow-highlighted@2x.png */; };
 		D4D66ACF1A0168DB004C4D5B /* RelaxedContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = D4D66ACE1A0168DB004C4D5B /* RelaxedContainerView.m */; };
 		D4D66AD21A0169DA004C4D5B /* EagerScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = D4D66AD11A0169DA004C4D5B /* EagerScrollView.m */; };
+		D4E51FF21A091F37003CF59B /* digerversiyonlar_kapatbutton~ipad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D4E51FD21A091F37003CF59B /* digerversiyonlar_kapatbutton~ipad@2x.png */; };
+		D4E51FF31A091F37003CF59B /* digerversiyonlar_oysayisicontainer~ipad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D4E51FD31A091F37003CF59B /* digerversiyonlar_oysayisicontainer~ipad@2x.png */; };
+		D4E51FF41A091F37003CF59B /* digerversiyonlar_rightarrow~ipad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D4E51FD41A091F37003CF59B /* digerversiyonlar_rightarrow~ipad@2x.png */; };
+		D4E51FF61A091F37003CF59B /* home_enyenilerbutton~ipad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D4E51FD61A091F37003CF59B /* home_enyenilerbutton~ipad@2x.png */; };
+		D4E51FF71A091F37003CF59B /* home_logo~ipad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D4E51FD71A091F37003CF59B /* home_logo~ipad@2x.png */; };
+		D4E51FF81A091F37003CF59B /* home_populerbutton~ipad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D4E51FD81A091F37003CF59B /* home_populerbutton~ipad@2x.png */; };
+		D4E51FF91A091F37003CF59B /* home_rastgelebutton~ipad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D4E51FD91A091F37003CF59B /* home_rastgelebutton~ipad@2x.png */; };
+		D4E51FFB1A091F37003CF59B /* home_searchcontainer~ipad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D4E51FDB1A091F37003CF59B /* home_searchcontainer~ipad@2x.png */; };
+		D4E51FFC1A091F37003CF59B /* home_searchicon~ipad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D4E51FDC1A091F37003CF59B /* home_searchicon~ipad@2x.png */; };
+		D4E51FFD1A091F37003CF59B /* songdetail_albumart~ipad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D4E51FDD1A091F37003CF59B /* songdetail_albumart~ipad@2x.png */; };
+		D4E51FFE1A091F37003CF59B /* songdetail_digerversiyonlarbutton~ipad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D4E51FDE1A091F37003CF59B /* songdetail_digerversiyonlarbutton~ipad@2x.png */; };
+		D4E51FFF1A091F37003CF59B /* songdetail_oyverbutton_pressed~ipad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D4E51FDF1A091F37003CF59B /* songdetail_oyverbutton_pressed~ipad@2x.png */; };
+		D4E520001A091F37003CF59B /* songdetail_oyverbutton~ipad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D4E51FE01A091F37003CF59B /* songdetail_oyverbutton~ipad@2x.png */; };
+		D4E520011A091F37003CF59B /* digerversiyonlar_kapatbutton~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = D4E51FE21A091F37003CF59B /* digerversiyonlar_kapatbutton~ipad.png */; };
+		D4E520021A091F37003CF59B /* digerversiyonlar_oysayisicontainer~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = D4E51FE31A091F37003CF59B /* digerversiyonlar_oysayisicontainer~ipad.png */; };
+		D4E520031A091F37003CF59B /* digerversiyonlar_rightarrow~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = D4E51FE41A091F37003CF59B /* digerversiyonlar_rightarrow~ipad.png */; };
+		D4E520051A091F37003CF59B /* home_enyenilerbutton~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = D4E51FE61A091F37003CF59B /* home_enyenilerbutton~ipad.png */; };
+		D4E520061A091F37003CF59B /* home_logo~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = D4E51FE71A091F37003CF59B /* home_logo~ipad.png */; };
+		D4E520071A091F37003CF59B /* home_populerbutton~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = D4E51FE81A091F37003CF59B /* home_populerbutton~ipad.png */; };
+		D4E520081A091F37003CF59B /* home_rastgelebutton~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = D4E51FE91A091F37003CF59B /* home_rastgelebutton~ipad.png */; };
+		D4E5200A1A091F37003CF59B /* home_searchcontainer~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = D4E51FEB1A091F37003CF59B /* home_searchcontainer~ipad.png */; };
+		D4E5200B1A091F37003CF59B /* home_searchicon~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = D4E51FEC1A091F37003CF59B /* home_searchicon~ipad.png */; };
+		D4E5200C1A091F37003CF59B /* songdetail_albumart~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = D4E51FED1A091F37003CF59B /* songdetail_albumart~ipad.png */; };
+		D4E5200D1A091F37003CF59B /* songdetail_digerversiyonlarbutton~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = D4E51FEE1A091F37003CF59B /* songdetail_digerversiyonlarbutton~ipad.png */; };
+		D4E5200E1A091F37003CF59B /* songdetail_oyverbutton_pressed~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = D4E51FEF1A091F37003CF59B /* songdetail_oyverbutton_pressed~ipad.png */; };
+		D4E5200F1A091F37003CF59B /* songdetail_oyverbutton~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = D4E51FF01A091F37003CF59B /* songdetail_oyverbutton~ipad.png */; };
+		D4E520111A092442003CF59B /* splash~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = D4E520101A092442003CF59B /* splash~ipad.png */; };
+		D4E520131A09244A003CF59B /* splash~ipad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D4E520121A09244A003CF59B /* splash~ipad@2x.png */; };
+		D4E520151A092564003CF59B /* Main_ipad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4E520141A092564003CF59B /* Main_ipad.storyboard */; };
+		D4E520171A094835003CF59B /* home_searchbutton~ipad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D4E520161A094835003CF59B /* home_searchbutton~ipad@2x.png */; };
+		D4E520191A09483C003CF59B /* home_searchbutton~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = D4E520181A09483C003CF59B /* home_searchbutton~ipad.png */; };
+		D4E5201C1A095D5E003CF59B /* home_bg~ipad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D4E5201A1A095D5E003CF59B /* home_bg~ipad@2x.png */; };
+		D4E5201D1A095D5E003CF59B /* home_bg~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = D4E5201B1A095D5E003CF59B /* home_bg~ipad.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -234,7 +266,6 @@
 		D4BC1F1A19E68A2600154A1A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D4BC1F2D19E68E8C00154A1A /* libpop.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libpop.a; path = "../../Library/Developer/Xcode/DerivedData/Akorlar-fgdocwtiuhhfhzbwmotwdmkrnlje/Build/Products/Debug-iphoneos/libpop.a"; sourceTree = "<group>"; };
 		D4BC1F2F19E6AAEB00154A1A /* home_nullcontainer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home_nullcontainer.png; sourceTree = "<group>"; };
-		D4BC1F3119E6B97400154A1A /* Launcher.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Launcher.storyboard; sourceTree = "<group>"; };
 		D4BC1F3319E6BAF300154A1A /* SongController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SongController.h; sourceTree = "<group>"; };
 		D4BC1F3419E6BAF300154A1A /* SongController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SongController.m; sourceTree = "<group>"; };
 		D4BC1F3619E6D05100154A1A /* home_searchcontainer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home_searchcontainer.png; sourceTree = "<group>"; };
@@ -249,6 +280,39 @@
 		D4D66ACE1A0168DB004C4D5B /* RelaxedContainerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RelaxedContainerView.m; sourceTree = "<group>"; };
 		D4D66AD01A0169DA004C4D5B /* EagerScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EagerScrollView.h; sourceTree = "<group>"; };
 		D4D66AD11A0169DA004C4D5B /* EagerScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EagerScrollView.m; sourceTree = "<group>"; };
+		D4E51FD21A091F37003CF59B /* digerversiyonlar_kapatbutton~ipad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "digerversiyonlar_kapatbutton~ipad@2x.png"; sourceTree = "<group>"; };
+		D4E51FD31A091F37003CF59B /* digerversiyonlar_oysayisicontainer~ipad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "digerversiyonlar_oysayisicontainer~ipad@2x.png"; sourceTree = "<group>"; };
+		D4E51FD41A091F37003CF59B /* digerversiyonlar_rightarrow~ipad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "digerversiyonlar_rightarrow~ipad@2x.png"; sourceTree = "<group>"; };
+		D4E51FD61A091F37003CF59B /* home_enyenilerbutton~ipad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home_enyenilerbutton~ipad@2x.png"; sourceTree = "<group>"; };
+		D4E51FD71A091F37003CF59B /* home_logo~ipad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home_logo~ipad@2x.png"; sourceTree = "<group>"; };
+		D4E51FD81A091F37003CF59B /* home_populerbutton~ipad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home_populerbutton~ipad@2x.png"; sourceTree = "<group>"; };
+		D4E51FD91A091F37003CF59B /* home_rastgelebutton~ipad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home_rastgelebutton~ipad@2x.png"; sourceTree = "<group>"; };
+		D4E51FDB1A091F37003CF59B /* home_searchcontainer~ipad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home_searchcontainer~ipad@2x.png"; sourceTree = "<group>"; };
+		D4E51FDC1A091F37003CF59B /* home_searchicon~ipad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home_searchicon~ipad@2x.png"; sourceTree = "<group>"; };
+		D4E51FDD1A091F37003CF59B /* songdetail_albumart~ipad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "songdetail_albumart~ipad@2x.png"; sourceTree = "<group>"; };
+		D4E51FDE1A091F37003CF59B /* songdetail_digerversiyonlarbutton~ipad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "songdetail_digerversiyonlarbutton~ipad@2x.png"; sourceTree = "<group>"; };
+		D4E51FDF1A091F37003CF59B /* songdetail_oyverbutton_pressed~ipad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "songdetail_oyverbutton_pressed~ipad@2x.png"; sourceTree = "<group>"; };
+		D4E51FE01A091F37003CF59B /* songdetail_oyverbutton~ipad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "songdetail_oyverbutton~ipad@2x.png"; sourceTree = "<group>"; };
+		D4E51FE21A091F37003CF59B /* digerversiyonlar_kapatbutton~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "digerversiyonlar_kapatbutton~ipad.png"; sourceTree = "<group>"; };
+		D4E51FE31A091F37003CF59B /* digerversiyonlar_oysayisicontainer~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "digerversiyonlar_oysayisicontainer~ipad.png"; sourceTree = "<group>"; };
+		D4E51FE41A091F37003CF59B /* digerversiyonlar_rightarrow~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "digerversiyonlar_rightarrow~ipad.png"; sourceTree = "<group>"; };
+		D4E51FE61A091F37003CF59B /* home_enyenilerbutton~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home_enyenilerbutton~ipad.png"; sourceTree = "<group>"; };
+		D4E51FE71A091F37003CF59B /* home_logo~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home_logo~ipad.png"; sourceTree = "<group>"; };
+		D4E51FE81A091F37003CF59B /* home_populerbutton~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home_populerbutton~ipad.png"; sourceTree = "<group>"; };
+		D4E51FE91A091F37003CF59B /* home_rastgelebutton~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home_rastgelebutton~ipad.png"; sourceTree = "<group>"; };
+		D4E51FEB1A091F37003CF59B /* home_searchcontainer~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home_searchcontainer~ipad.png"; sourceTree = "<group>"; };
+		D4E51FEC1A091F37003CF59B /* home_searchicon~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home_searchicon~ipad.png"; sourceTree = "<group>"; };
+		D4E51FED1A091F37003CF59B /* songdetail_albumart~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "songdetail_albumart~ipad.png"; sourceTree = "<group>"; };
+		D4E51FEE1A091F37003CF59B /* songdetail_digerversiyonlarbutton~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "songdetail_digerversiyonlarbutton~ipad.png"; sourceTree = "<group>"; };
+		D4E51FEF1A091F37003CF59B /* songdetail_oyverbutton_pressed~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "songdetail_oyverbutton_pressed~ipad.png"; sourceTree = "<group>"; };
+		D4E51FF01A091F37003CF59B /* songdetail_oyverbutton~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "songdetail_oyverbutton~ipad.png"; sourceTree = "<group>"; };
+		D4E520101A092442003CF59B /* splash~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "splash~ipad.png"; sourceTree = "<group>"; };
+		D4E520121A09244A003CF59B /* splash~ipad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "splash~ipad@2x.png"; sourceTree = "<group>"; };
+		D4E520141A092564003CF59B /* Main_ipad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main_ipad.storyboard; sourceTree = "<group>"; };
+		D4E520161A094835003CF59B /* home_searchbutton~ipad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home_searchbutton~ipad@2x.png"; sourceTree = "<group>"; };
+		D4E520181A09483C003CF59B /* home_searchbutton~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home_searchbutton~ipad.png"; sourceTree = "<group>"; };
+		D4E5201A1A095D5E003CF59B /* home_bg~ipad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home_bg~ipad@2x.png"; sourceTree = "<group>"; };
+		D4E5201B1A095D5E003CF59B /* home_bg~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "home_bg~ipad.png"; path = "../retina/home_bg~ipad.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -407,7 +471,7 @@
 				D4283AB719FD8F9B0001C51D /* ItemCell.m */,
 				D4283AC719FDBC510001C51D /* Song.m */,
 				D4B9291219E559BA002060E4 /* Main.storyboard */,
-				D4BC1F3119E6B97400154A1A /* Launcher.storyboard */,
+				D4E520141A092564003CF59B /* Main_ipad.storyboard */,
 				D4B9291519E559BA002060E4 /* Images.xcassets */,
 				D4B9290819E559BA002060E4 /* Supporting Files */,
 			);
@@ -444,6 +508,7 @@
 		D4B9292E19E55A7B002060E4 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				D4E51FC91A091A28003CF59B /* iPad */,
 				D4283AB919FDB3E00001C51D /* Fonts */,
 				D453848419E66D2400323B2B /* splash-568h@2x.png */,
 				D49FD6D21A02B59100C25188 /* splash@2x.png */,
@@ -507,6 +572,61 @@
 				D4D66AC819FFC302004C4D5B /* pop-tests-osx.octest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		D4E51FC91A091A28003CF59B /* iPad */ = {
+			isa = PBXGroup;
+			children = (
+				D4E51FD01A091F37003CF59B /* retina */,
+				D4E51FE11A091F37003CF59B /* normal */,
+			);
+			name = iPad;
+			sourceTree = "<group>";
+		};
+		D4E51FD01A091F37003CF59B /* retina */ = {
+			isa = PBXGroup;
+			children = (
+				D4E520161A094835003CF59B /* home_searchbutton~ipad@2x.png */,
+				D4E520121A09244A003CF59B /* splash~ipad@2x.png */,
+				D4E51FD21A091F37003CF59B /* digerversiyonlar_kapatbutton~ipad@2x.png */,
+				D4E51FD31A091F37003CF59B /* digerversiyonlar_oysayisicontainer~ipad@2x.png */,
+				D4E51FD41A091F37003CF59B /* digerversiyonlar_rightarrow~ipad@2x.png */,
+				D4E5201A1A095D5E003CF59B /* home_bg~ipad@2x.png */,
+				D4E51FD61A091F37003CF59B /* home_enyenilerbutton~ipad@2x.png */,
+				D4E51FD71A091F37003CF59B /* home_logo~ipad@2x.png */,
+				D4E51FD81A091F37003CF59B /* home_populerbutton~ipad@2x.png */,
+				D4E51FD91A091F37003CF59B /* home_rastgelebutton~ipad@2x.png */,
+				D4E51FDB1A091F37003CF59B /* home_searchcontainer~ipad@2x.png */,
+				D4E51FDC1A091F37003CF59B /* home_searchicon~ipad@2x.png */,
+				D4E51FDD1A091F37003CF59B /* songdetail_albumart~ipad@2x.png */,
+				D4E51FDE1A091F37003CF59B /* songdetail_digerversiyonlarbutton~ipad@2x.png */,
+				D4E51FDF1A091F37003CF59B /* songdetail_oyverbutton_pressed~ipad@2x.png */,
+				D4E51FE01A091F37003CF59B /* songdetail_oyverbutton~ipad@2x.png */,
+			);
+			path = retina;
+			sourceTree = "<group>";
+		};
+		D4E51FE11A091F37003CF59B /* normal */ = {
+			isa = PBXGroup;
+			children = (
+				D4E520101A092442003CF59B /* splash~ipad.png */,
+				D4E51FE21A091F37003CF59B /* digerversiyonlar_kapatbutton~ipad.png */,
+				D4E51FE31A091F37003CF59B /* digerversiyonlar_oysayisicontainer~ipad.png */,
+				D4E51FE41A091F37003CF59B /* digerversiyonlar_rightarrow~ipad.png */,
+				D4E51FE61A091F37003CF59B /* home_enyenilerbutton~ipad.png */,
+				D4E51FE71A091F37003CF59B /* home_logo~ipad.png */,
+				D4E5201B1A095D5E003CF59B /* home_bg~ipad.png */,
+				D4E520181A09483C003CF59B /* home_searchbutton~ipad.png */,
+				D4E51FE81A091F37003CF59B /* home_populerbutton~ipad.png */,
+				D4E51FE91A091F37003CF59B /* home_rastgelebutton~ipad.png */,
+				D4E51FEB1A091F37003CF59B /* home_searchcontainer~ipad.png */,
+				D4E51FEC1A091F37003CF59B /* home_searchicon~ipad.png */,
+				D4E51FED1A091F37003CF59B /* songdetail_albumart~ipad.png */,
+				D4E51FEE1A091F37003CF59B /* songdetail_digerversiyonlarbutton~ipad.png */,
+				D4E51FEF1A091F37003CF59B /* songdetail_oyverbutton_pressed~ipad.png */,
+				D4E51FF01A091F37003CF59B /* songdetail_oyverbutton~ipad.png */,
+			);
+			path = normal;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -629,36 +749,68 @@
 			files = (
 				D4BC1F3019E6AAEB00154A1A /* home_nullcontainer.png in Resources */,
 				D453848519E66D2400323B2B /* splash-568h@2x.png in Resources */,
+				D4E51FF21A091F37003CF59B /* digerversiyonlar_kapatbutton~ipad@2x.png in Resources */,
 				D49FD6D11A02938D00C25188 /* home_searchbutton.png in Resources */,
+				D4E51FFE1A091F37003CF59B /* songdetail_digerversiyonlarbutton~ipad@2x.png in Resources */,
+				D4E51FF81A091F37003CF59B /* home_populerbutton~ipad@2x.png in Resources */,
 				D453847819E66C6100323B2B /* topbar_searchicon2.png in Resources */,
 				D453847619E66C6100323B2B /* topbar_removesearchicon.png in Resources */,
+				D4E520131A09244A003CF59B /* splash~ipad@2x.png in Resources */,
+				D4E5200A1A091F37003CF59B /* home_searchcontainer~ipad.png in Resources */,
+				D4E520001A091F37003CF59B /* songdetail_oyverbutton~ipad@2x.png in Resources */,
+				D4E520061A091F37003CF59B /* home_logo~ipad.png in Resources */,
+				D4E5200D1A091F37003CF59B /* songdetail_digerversiyonlarbutton~ipad.png in Resources */,
 				D453848119E66C6100323B2B /* digerversiyonlar_rightarrow.png in Resources */,
+				D4E520111A092442003CF59B /* splash~ipad.png in Resources */,
+				D4E520021A091F37003CF59B /* digerversiyonlar_oysayisicontainer~ipad.png in Resources */,
 				D453847A19E66C6100323B2B /* songlist_rightarrow.png in Resources */,
+				D4E5201C1A095D5E003CF59B /* home_bg~ipad@2x.png in Resources */,
+				D4E520051A091F37003CF59B /* home_enyenilerbutton~ipad.png in Resources */,
 				D453847019E66C6100323B2B /* home_bg.png in Resources */,
 				D453847B19E66C6100323B2B /* topbar_backicon@2x.png in Resources */,
+				D4E51FFB1A091F37003CF59B /* home_searchcontainer~ipad@2x.png in Resources */,
+				D4E520011A091F37003CF59B /* digerversiyonlar_kapatbutton~ipad.png in Resources */,
+				D4E5200B1A091F37003CF59B /* home_searchicon~ipad.png in Resources */,
 				D453847C19E66C6100323B2B /* digerversiyonlar_kapatbutton@2x.png in Resources */,
 				D4B9291419E559BA002060E4 /* Main.storyboard in Resources */,
+				D4E51FFC1A091F37003CF59B /* home_searchicon~ipad@2x.png in Resources */,
 				D453847D19E66C6100323B2B /* home_enyenilerbutton.png in Resources */,
+				D4E520081A091F37003CF59B /* home_rastgelebutton~ipad.png in Resources */,
+				D4E51FF31A091F37003CF59B /* digerversiyonlar_oysayisicontainer~ipad@2x.png in Resources */,
 				D4BC1F3719E6D05100154A1A /* home_searchcontainer.png in Resources */,
 				D4BC1F3E19E83A7900154A1A /* songdetail_albumart.png in Resources */,
+				D4E520171A094835003CF59B /* home_searchbutton~ipad@2x.png in Resources */,
 				D453847919E66C6100323B2B /* home_searchicon.png in Resources */,
 				D4D66ACA1A011451004C4D5B /* songdetail_noimage.png in Resources */,
 				D453847519E66C6100323B2B /* songdetail_oyverbutton.png in Resources */,
 				D453847119E66C6100323B2B /* home_logo.png in Resources */,
+				D4E5200E1A091F37003CF59B /* songdetail_oyverbutton_pressed~ipad.png in Resources */,
+				D4E51FF41A091F37003CF59B /* digerversiyonlar_rightarrow~ipad@2x.png in Resources */,
 				D4BC1F3B19E8369400154A1A /* songdetail_digerversiyonlarbutton.png in Resources */,
+				D4E51FF91A091F37003CF59B /* home_rastgelebutton~ipad@2x.png in Resources */,
 				D453847419E66C6100323B2B /* songdetail_oyverbutton_pressed.png in Resources */,
-				D4BC1F3219E6B97400154A1A /* Launcher.storyboard in Resources */,
+				D4E5201D1A095D5E003CF59B /* home_bg~ipad.png in Resources */,
+				D4E5200F1A091F37003CF59B /* songdetail_oyverbutton~ipad.png in Resources */,
 				D453847719E66C6100323B2B /* topbar_searchicon@2x.png in Resources */,
 				D453847F19E66C6100323B2B /* home_rastgelebutton.png in Resources */,
 				D4BC1F3F19E83A7900154A1A /* songdetail_albumartfade.png in Resources */,
 				D4B9291619E559BA002060E4 /* Images.xcassets in Resources */,
 				D4BC1F3A19E8369400154A1A /* songdetail_seperator.png in Resources */,
+				D4E51FFD1A091F37003CF59B /* songdetail_albumart~ipad@2x.png in Resources */,
+				D4E5200C1A091F37003CF59B /* songdetail_albumart~ipad.png in Resources */,
+				D4E520191A09483C003CF59B /* home_searchbutton~ipad.png in Resources */,
 				D49FD6D31A02B59100C25188 /* splash@2x.png in Resources */,
+				D4E520031A091F37003CF59B /* digerversiyonlar_rightarrow~ipad.png in Resources */,
+				D4E51FF61A091F37003CF59B /* home_enyenilerbutton~ipad@2x.png in Resources */,
 				D453848019E66C6100323B2B /* digerversiyonlar_oysayisicontainer.png in Resources */,
+				D4E520071A091F37003CF59B /* home_populerbutton~ipad.png in Resources */,
 				D4D66ACC1A011D3C004C4D5B /* songlist_rightarrow-highlighted@2x.png in Resources */,
+				D4E51FF71A091F37003CF59B /* home_logo~ipad@2x.png in Resources */,
 				D453847E19E66C6100323B2B /* home_populerbutton.png in Resources */,
 				D4283AC219FDB7420001C51D /* OpenSans-Bold.ttf in Resources */,
+				D4E51FFF1A091F37003CF59B /* songdetail_oyverbutton_pressed~ipad@2x.png in Resources */,
 				D4283AC319FDB7420001C51D /* OpenSans-Light.ttf in Resources */,
+				D4E520151A092564003CF59B /* Main_ipad.storyboard in Resources */,
 				D4283AC419FDB7420001C51D /* OpenSans-Regular.ttf in Resources */,
 				D4283AC519FDB8B80001C51D /* OpenSans-Semibold.ttf in Resources */,
 			);
@@ -856,6 +1008,7 @@
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "7e7b9f22-4c9c-4231-9a5d-b25921fa68be";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = /Users/hgeg/pop;
 			};
 			name = Debug;
@@ -884,6 +1037,7 @@
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "7e7b9f22-4c9c-4231-9a5d-b25921fa68be";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = /Users/hgeg/pop;
 			};
 			name = Release;

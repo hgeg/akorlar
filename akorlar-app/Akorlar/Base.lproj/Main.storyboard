@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A314h" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="FMw-kE-xUK">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A314h" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="FMw-kE-xUK">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
@@ -79,7 +79,7 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <segue destination="Off-aS-18m" kind="show" identifier="new" id="FuR-HM-V88"/>
+                                            <segue destination="Off-aS-18m" kind="push" identifier="new" id="FuR-HM-V88"/>
                                         </connections>
                                     </button>
                                     <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bfL-g8-Zsc">
@@ -92,7 +92,7 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <segue destination="Off-aS-18m" kind="show" identifier="popular" id="Dm4-7k-Lk3"/>
+                                            <segue destination="Off-aS-18m" kind="push" identifier="popular" id="Dm4-7k-Lk3"/>
                                         </connections>
                                     </button>
                                     <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PXO-eP-QjC">
@@ -105,7 +105,7 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <segue destination="8pH-2E-Jw0" kind="show" identifier="random" id="MdR-hx-vcF"/>
+                                            <segue destination="8pH-2E-Jw0" kind="push" identifier="random" id="MdR-hx-vcF"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LSA-Qy-lKR">
@@ -118,7 +118,7 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <segue destination="Off-aS-18m" kind="show" identifier="search" id="52z-es-mzi"/>
+                                            <segue destination="Off-aS-18m" kind="push" identifier="search" id="52z-es-mzi"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1rI-QU-4yG">
@@ -193,7 +193,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="538" y="450"/>
+            <point key="canvasLocation" x="286.93333333333334" y="426"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="e9P-1c-ItB">
@@ -219,7 +219,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P8W-Qg-9GM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="119" y="450"/>
+            <point key="canvasLocation" x="-235" y="426"/>
         </scene>
         <!--Song Controller-->
         <scene sceneID="aho-kg-OTc">
@@ -529,6 +529,7 @@
                             <outlet property="scrollView" destination="zt2-cS-qhr" id="8Sd-Xw-857"/>
                         </connections>
                     </view>
+                    <navigationItem key="navigationItem" id="eNO-nc-xyt"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <connections>
                         <outlet property="artistContainer" destination="0bB-KS-BBy" id="5Ab-MX-2cH"/>
@@ -555,7 +556,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bDD-Ai-Jhm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1579" y="450"/>
+            <point key="canvasLocation" x="1048" y="426"/>
         </scene>
         <!--Songs Controller-->
         <scene sceneID="0d0-5E-gY9">
@@ -625,7 +626,7 @@
                                     <outlet property="artistLabel" destination="yQX-aD-BjH" id="3CH-ih-j7R"/>
                                     <outlet property="itemImage" destination="5Ti-Lr-Lgl" id="CR5-v3-JlI"/>
                                     <outlet property="titleLabel" destination="521-9T-4RK" id="q7w-Am-hKx"/>
-                                    <segue destination="8pH-2E-Jw0" kind="show" identifier="detail" id="4eR-Km-bgV"/>
+                                    <segue destination="8pH-2E-Jw0" kind="push" identifier="detail" id="4eR-Km-bgV"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -650,7 +651,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e7B-N2-VXV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1146" y="1167"/>
+            <point key="canvasLocation" x="618" y="1142"/>
         </scene>
     </scenes>
     <resources>
@@ -671,8 +672,13 @@
         <image name="songlist_rightarrow.png" width="20" height="30"/>
         <image name="topbar_searchicon.png" width="25" height="25"/>
     </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="52z-es-mzi"/>
-        <segue reference="MdR-hx-vcF"/>
+        <segue reference="4eR-Km-bgV"/>
     </inferredMetricsTieBreakers>
 </document>

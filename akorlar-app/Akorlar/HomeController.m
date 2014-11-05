@@ -40,13 +40,14 @@
     
     // Show splash animation then fade it out
     NSString *splash_img;
+    if (isIPad)
+        splash_img = @"splash~ipad";
     if (isIPhone5)
          splash_img = @"splash-568x";
     else splash_img = @"splash";
     UIImageView *splash = [[UIImageView alloc] initWithImage:[UIImage imageNamed:splash_img]];
     splash.frame = rect(0,0,screen.width,screen.height);
     [self.view addSubview:splash];
-    
     POPBasicAnimation *fade = [POPBasicAnimation animationWithPropertyNamed:kPOPViewAlpha];
     fade.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
     fade.fromValue = @1; fade.toValue = @0;
@@ -54,10 +55,18 @@
         
         // Move logo to final position
         POPSpringAnimation *move = [POPSpringAnimation animationWithPropertyNamed:kPOPViewFrame];
-        move.fromValue = [NSValue valueWithCGRect:rect((screen.width-237)/2,93,237,173)];
-        move.toValue = [NSValue valueWithCGRect:rect((screen.width-237)/2,33,237,173)];
+        if (isIPad){
+            move.fromValue = [NSValue valueWithCGRect:rect((screen.width-237)/2,282,237,207)];
+            move.toValue = [NSValue valueWithCGRect:rect((screen.width-237)/2,120,237,207)];
+        }else{
+            move.fromValue = [NSValue valueWithCGRect:rect((screen.width-237)/2,93,237,173)];
+            move.toValue = [NSValue valueWithCGRect:rect((screen.width-237)/2,33,237,173)];
+        }
         move.completionBlock = ^(POPAnimation *pa,BOOL b){
-            self.logoTopBoundary.constant = 13;
+            if (isIPad)
+                self.logoTopBoundary.constant = 100;
+            else
+                self.logoTopBoundary.constant = 13;
             
             // Show search tab and menu buttons
             POPBasicAnimation *fade2 = [POPBasicAnimation animationWithPropertyNamed:kPOPViewAlpha];

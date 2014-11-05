@@ -41,14 +41,21 @@
     [tabText beginEditing];
     NSMutableArray *variations = [[NSMutableArray alloc] initWithCapacity:[chords count]*4];
     [chords enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-        NSString *c1 = f(@"%@-",(NSString *)obj);
-        NSString *c2 = f(@"-%@",(NSString *)obj);
-        NSString *c3 = f(@"%@  ",(NSString *)obj);
-        NSString *c4 = f(@"  %@",(NSString *)obj);
-        [variations addObject:c1];
-        [variations addObject:c2];
-        [variations addObject:c3];
-        [variations addObject:c4];
+        [variations addObjectsFromArray:@[
+        f(@"%@-",(NSString *)obj),
+        f(@"-%@",(NSString *)obj),
+        f(@"%@  ",(NSString *)obj),
+        f(@"  %@",(NSString *)obj),
+        f(@"%@\n",(NSString *)obj),
+        f(@"\n%@ ",(NSString *)obj),
+        f(@" %@\n",(NSString *)obj),
+        f(@"\n%@-",(NSString *)obj),
+        f(@"\n%@\n",(NSString *)obj),
+        f(@"\n %@",(NSString *)obj),
+        f(@"%@ \n",(NSString *)obj),
+        f(@"%@ ",(NSString *)obj),
+        f(@"[%@]",(NSString *)obj),
+        ]];
     }];
     for (NSString *chord in variations) {
       NSRange range = NSMakeRange(0, tabText.string.length);
@@ -319,7 +326,12 @@
                 POPSpringAnimation *move = [POPSpringAnimation animationWithPropertyNamed:kPOPViewFrame];
                 CGRect aframe = self.artistContainer.frame;
                 move.fromValue = [NSValue valueWithCGRect:aframe];
-                move.toValue = [NSValue valueWithCGRect:rect(-18,aframe.origin.y,aframe.size.width,aframe.size.height)];
+                
+                if(isIPad) {
+                    move.toValue = [NSValue valueWithCGRect:rect(0,aframe.origin.y,aframe.size.width,aframe.size.height)];
+                }else{
+                    move.toValue = [NSValue valueWithCGRect:rect(-18,aframe.origin.y,aframe.size.width,aframe.size.height)];
+                }
                 move.completionBlock = ^(POPAnimation *pa,BOOL b){
                     [UIView animateWithDuration:0.25 animations:^{
                         self.smallContainer.alpha = 1;
@@ -350,13 +362,23 @@
             self.smallContainer.alpha = 0;
             self.tabView.userInteractionEnabled = false;
         }
-        int newSize = pos>=80?50+22*(100-pos)/20:72;
-        int newX = 48 - newSize/2.0;
-        int newY = pos>=80?(160-pos-newSize)/2.0:5;
-        self.artistPic.frame = rect(newX, newY, newSize, newSize);
-        CGPoint oldCenter = self.coverPic.center;
-        self.coverPic.center = point(oldCenter.x,coverCenter+(pos)/4.0);
-        self.artistPic.layer.cornerRadius = self.artistPic.frame.size.width/2.0;
+        if(isIPad) {
+            int newSize = pos>=80?80+22*(100-pos)/20:100;
+            int newX = 48 - newSize/2.0;
+            int newY = pos>=80?(200-pos-newSize)/2.0:8;
+            self.artistPic.frame = rect(newX, newY, newSize, newSize);
+            CGPoint oldCenter = self.coverPic.center;
+            self.coverPic.center = point(oldCenter.x,coverCenter+(pos)/4.0);
+            self.artistPic.layer.cornerRadius = self.artistPic.frame.size.width/2.0;
+        }else {
+            int newSize = pos>=80?50+22*(100-pos)/20:72;
+            int newX = 48 - newSize/2.0;
+            int newY = pos>=80?(160-pos-newSize)/2.0:5;
+            self.artistPic.frame = rect(newX, newY, newSize, newSize);
+            CGPoint oldCenter = self.coverPic.center;
+            self.coverPic.center = point(oldCenter.x,coverCenter+(pos)/4.0);
+            self.artistPic.layer.cornerRadius = self.artistPic.frame.size.width/2.0;
+        }
     }
 }
 
