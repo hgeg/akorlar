@@ -938,7 +938,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				METAL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "b9fea830-1fe2-441a-8063-968f68b2e101";
+				PROVISIONING_PROFILE = "7e7b9f22-4c9c-4231-9a5d-b25921fa68be";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -975,7 +975,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				METAL_ENABLE_DEBUG_INFO = NO;
-				PROVISIONING_PROFILE = "b9fea830-1fe2-441a-8063-968f68b2e101";
+				PROVISIONING_PROFILE = "7e7b9f22-4c9c-4231-9a5d-b25921fa68be";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -1007,7 +1007,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "7e7b9f22-4c9c-4231-9a5d-b25921fa68be";
 				TARGETED_DEVICE_FAMILY = "1,2";
-				USER_HEADER_SEARCH_PATHS = /Users/hgeg/akorlar/pop;
+				USER_HEADER_SEARCH_PATHS = /Users/taneryildirim/Downloads/akorlar/pop;
 			};
 			name = Debug;
 		};
@@ -1036,7 +1036,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "7e7b9f22-4c9c-4231-9a5d-b25921fa68be";
 				TARGETED_DEVICE_FAMILY = "1,2";
-				USER_HEADER_SEARCH_PATHS = /Users/hgeg/akorlar/pop;
+				USER_HEADER_SEARCH_PATHS = /Users/taneryildirim/Downloads/akorlar/pop;
 			};
 			name = Release;
 		};
