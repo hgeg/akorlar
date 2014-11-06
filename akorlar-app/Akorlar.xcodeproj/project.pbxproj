@@ -119,40 +119,40 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		D4B9291C19E559BA002060E4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D4B928FD19E559BA002060E4 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = D4B9290419E559BA002060E4;
-			remoteInfo = Akorlar;
-		};
-		D4D66AC119FFC302004C4D5B /* PBXContainerItemProxy */ = {
+		D47CF4111A0B8DDB009321B6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D4D66ABA19FFC301004C4D5B /* pop.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = EC191218162FB53A00E0CC76;
 			remoteInfo = pop;
 		};
-		D4D66AC319FFC302004C4D5B /* PBXContainerItemProxy */ = {
+		D47CF4131A0B8DDB009321B6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D4D66ABA19FFC301004C4D5B /* pop.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = EC68857F18C7B60000C6194C;
 			remoteInfo = "pop-osx";
 		};
-		D4D66AC519FFC302004C4D5B /* PBXContainerItemProxy */ = {
+		D47CF4151A0B8DDB009321B6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D4D66ABA19FFC301004C4D5B /* pop.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = ECF01ED318C92B7F009E0AD1;
 			remoteInfo = "pop-tests";
 		};
-		D4D66AC719FFC302004C4D5B /* PBXContainerItemProxy */ = {
+		D47CF4171A0B8DDB009321B6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D4D66ABA19FFC301004C4D5B /* pop.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = EC7E319918C93D6500B38170;
 			remoteInfo = "pop-tests-osx";
+		};
+		D4B9291C19E559BA002060E4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D4B928FD19E559BA002060E4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D4B9290419E559BA002060E4;
+			remoteInfo = Akorlar;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -273,7 +273,7 @@
 		D4BC1F3919E8369400154A1A /* songdetail_digerversiyonlarbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = songdetail_digerversiyonlarbutton.png; sourceTree = "<group>"; };
 		D4BC1F3C19E83A7900154A1A /* songdetail_albumart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = songdetail_albumart.png; sourceTree = "<group>"; };
 		D4BC1F3D19E83A7900154A1A /* songdetail_albumartfade.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = songdetail_albumartfade.png; sourceTree = "<group>"; };
-		D4D66ABA19FFC301004C4D5B /* pop.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = pop.xcodeproj; path = ../../../pop/pop.xcodeproj; sourceTree = "<group>"; };
+		D4D66ABA19FFC301004C4D5B /* pop.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = pop.xcodeproj; path = ../pop/pop.xcodeproj; sourceTree = "<group>"; };
 		D4D66AC91A011451004C4D5B /* songdetail_noimage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = songdetail_noimage.png; sourceTree = "<group>"; };
 		D4D66ACB1A011D3C004C4D5B /* songlist_rightarrow-highlighted@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "songlist_rightarrow-highlighted@2x.png"; sourceTree = "<group>"; };
 		D4D66ACD1A0168DB004C4D5B /* RelaxedContainerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RelaxedContainerView.h; sourceTree = "<group>"; };
@@ -364,6 +364,17 @@
 				D4283ABE19FDB3FA0001C51D /* OpenSans-Semibold.ttf */,
 			);
 			name = Fonts;
+			sourceTree = "<group>";
+		};
+		D47CF40B1A0B8DDB009321B6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D47CF4121A0B8DDB009321B6 /* libpop.a */,
+				D47CF4141A0B8DDB009321B6 /* pop.framework */,
+				D47CF4161A0B8DDB009321B6 /* pop-tests.octest */,
+				D47CF4181A0B8DDB009321B6 /* pop-tests-osx.octest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		D4A71FB019FE801D00270934 /* SDWebImage */ = {
@@ -563,17 +574,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		D4D66ABB19FFC301004C4D5B /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				D4D66AC219FFC302004C4D5B /* libpop.a */,
-				D4D66AC419FFC302004C4D5B /* pop.framework */,
-				D4D66AC619FFC302004C4D5B /* pop-tests.octest */,
-				D4D66AC819FFC302004C4D5B /* pop-tests-osx.octest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		D4E51FC91A091A28003CF59B /* iPad */ = {
 			isa = PBXGroup;
 			children = (
@@ -699,7 +699,7 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = D4D66ABB19FFC301004C4D5B /* Products */;
+					ProductGroup = D47CF40B1A0B8DDB009321B6 /* Products */;
 					ProjectRef = D4D66ABA19FFC301004C4D5B /* pop.xcodeproj */;
 				},
 			);
@@ -712,32 +712,32 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		D4D66AC219FFC302004C4D5B /* libpop.a */ = {
+		D47CF4121A0B8DDB009321B6 /* libpop.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = libpop.a;
-			remoteRef = D4D66AC119FFC302004C4D5B /* PBXContainerItemProxy */;
+			remoteRef = D47CF4111A0B8DDB009321B6 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		D4D66AC419FFC302004C4D5B /* pop.framework */ = {
+		D47CF4141A0B8DDB009321B6 /* pop.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = pop.framework;
-			remoteRef = D4D66AC319FFC302004C4D5B /* PBXContainerItemProxy */;
+			remoteRef = D47CF4131A0B8DDB009321B6 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		D4D66AC619FFC302004C4D5B /* pop-tests.octest */ = {
+		D47CF4161A0B8DDB009321B6 /* pop-tests.octest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = "pop-tests.octest";
-			remoteRef = D4D66AC519FFC302004C4D5B /* PBXContainerItemProxy */;
+			remoteRef = D47CF4151A0B8DDB009321B6 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		D4D66AC819FFC302004C4D5B /* pop-tests-osx.octest */ = {
+		D47CF4181A0B8DDB009321B6 /* pop-tests-osx.octest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = "pop-tests-osx.octest";
-			remoteRef = D4D66AC719FFC302004C4D5B /* PBXContainerItemProxy */;
+			remoteRef = D47CF4171A0B8DDB009321B6 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -990,7 +990,7 @@
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Taner Yildirim (677762377T)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Akorlar/Tools.pch;
 				INFOPLIST_FILE = Akorlar/Info.plist;
@@ -1019,7 +1019,7 @@
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Taner Yildirim (677762377T)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Akorlar/Tools.pch;
 				INFOPLIST_FILE = Akorlar/Info.plist;
