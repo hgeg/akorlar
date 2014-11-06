@@ -27,7 +27,6 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    [ORTools showLoaderOnWindow];
 
     self.artistPic.layer.cornerRadius = self.artistPic.frame.size.width/2.0;
     self.artistPic.clipsToBounds = true;
@@ -75,6 +74,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [ORTools showLoaderOnWindow];
     isSmall = false;
     self.navigationItem.title = @"";
     self.tabView.userInteractionEnabled = false;

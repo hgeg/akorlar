@@ -91,15 +91,6 @@
                                             <segue destination="M5s-Ux-Atv" kind="push" identifier="random" id="kDX-qO-oua"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NX3-Az-Arw">
-                                        <rect key="frame" x="144" y="488" width="480" height="47"/>
-                                        <state key="normal" image="home_searchbutton.png">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="search:" destination="ULM-mz-ufK" eventType="touchUpInside" id="bLi-N0-xZ0"/>
-                                        </connections>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WOa-SV-1S9">
                                         <rect key="frame" x="144" y="488" width="480" height="47"/>
                                         <state key="normal" image="home_searchbutton.png">
@@ -107,6 +98,15 @@
                                         </state>
                                         <connections>
                                             <segue destination="rtX-Q6-xvB" kind="push" identifier="search" id="w2f-fp-tNC"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NX3-Az-Arw">
+                                        <rect key="frame" x="144" y="488" width="480" height="47"/>
+                                        <state key="normal" image="home_searchbutton.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="search:" destination="ULM-mz-ufK" eventType="touchUpInside" id="bLi-N0-xZ0"/>
                                         </connections>
                                     </button>
                                 </subviews>
